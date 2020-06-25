@@ -224,7 +224,7 @@
             // 
             this.lnkMyWebsite.AutoSize = true;
             this.lnkMyWebsite.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.lnkMyWebsite.Location = new System.Drawing.Point(344, 640);
+            this.lnkMyWebsite.Location = new System.Drawing.Point(399, 640);
             this.lnkMyWebsite.Name = "lnkMyWebsite";
             this.lnkMyWebsite.Size = new System.Drawing.Size(113, 12);
             this.lnkMyWebsite.TabIndex = 5;
@@ -235,11 +235,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(481, 640);
+            this.label2.Location = new System.Drawing.Point(523, 640);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 12);
+            this.label2.Size = new System.Drawing.Size(89, 12);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Code By cw1997 V1.0.0";
+            this.label2.Text = "Code By cw1997";
             // 
             // lstViewSensor
             // 
@@ -370,6 +370,7 @@
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.Text = "Dell Fans Speed Controller";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.grpMain.ResumeLayout(false);
             this.grpMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trkBarSpeed)).EndInit();

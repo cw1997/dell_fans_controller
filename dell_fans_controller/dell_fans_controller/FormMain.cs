@@ -12,6 +12,8 @@ namespace dell_fans_controller
 {
     public partial class frmMain : Form
     {
+        private static string version = "v1.0.0";
+
         private static string currentPath = Application.StartupPath; // System.Environment.CurrentDirectory;
         private static string configFileName = "\\config.ini";
         private static string explorer = "explorer";
@@ -67,6 +69,7 @@ namespace dell_fans_controller
         public frmMain()
         {
             InitializeComponent();
+
 
             if (File.Exists(configFilePath))
             {
@@ -193,6 +196,12 @@ namespace dell_fans_controller
         private void TxtPassword_LostFocus(object sender, EventArgs e)
         {
             saveConfig();
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
+            this.Text += " " + version;
         }
     }
 }
