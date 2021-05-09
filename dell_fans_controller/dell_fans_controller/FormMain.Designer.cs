@@ -28,23 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.grpMain = new System.Windows.Forms.GroupBox();
-            this.lblPassword = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblIp = new System.Windows.Forms.Label();
+            this.btnVisitDellService = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.txtIp = new System.Windows.Forms.TextBox();
             this.lblUser = new System.Windows.Forms.Label();
             this.txtUser = new System.Windows.Forms.TextBox();
-            this.btnVisitDellService = new System.Windows.Forms.Button();
-            this.lblIp = new System.Windows.Forms.Label();
-            this.txtIp = new System.Windows.Forms.TextBox();
             this.trkBarSpeed = new System.Windows.Forms.TrackBar();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnSet = new System.Windows.Forms.Button();
             this.nbrUpDownSpeed = new System.Windows.Forms.NumericUpDown();
-            this.lblTip = new System.Windows.Forms.Label();
-            this.lnkRepo = new System.Windows.Forms.LinkLabel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lnkMyWebsite = new System.Windows.Forms.LinkLabel();
-            this.label2 = new System.Windows.Forms.Label();
             this.lstViewSensor = new System.Windows.Forms.ListView();
             this.colKey = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colValue = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -54,49 +51,85 @@
             this.colWarningThresholdMin = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colWarningThresholdMax = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colFaultThresholdMax = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.colExtra = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.nbrUpDownAutoRefresh = new System.Windows.Forms.NumericUpDown();
             this.lblAutoRefresh = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnRefreshNow = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.background_FetchStates = new System.ComponentModel.BackgroundWorker();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.about_button = new System.Windows.Forms.Button();
             this.grpMain.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trkBarSpeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nbrUpDownSpeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nbrUpDownAutoRefresh)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpMain
             // 
-            this.grpMain.Controls.Add(this.lblPassword);
-            this.grpMain.Controls.Add(this.txtPassword);
-            this.grpMain.Controls.Add(this.lblUser);
-            this.grpMain.Controls.Add(this.txtUser);
-            this.grpMain.Controls.Add(this.btnVisitDellService);
-            this.grpMain.Controls.Add(this.lblIp);
-            this.grpMain.Controls.Add(this.txtIp);
-            this.grpMain.Controls.Add(this.trkBarSpeed);
-            this.grpMain.Controls.Add(this.btnReset);
-            this.grpMain.Controls.Add(this.btnSet);
-            this.grpMain.Controls.Add(this.nbrUpDownSpeed);
+            this.grpMain.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpMain.Controls.Add(this.tableLayoutPanel1);
             this.grpMain.Location = new System.Drawing.Point(12, 12);
             this.grpMain.Name = "grpMain";
-            this.grpMain.Size = new System.Drawing.Size(600, 234);
+            this.grpMain.Size = new System.Drawing.Size(862, 63);
             this.grpMain.TabIndex = 1;
             this.grpMain.TabStop = false;
-            this.grpMain.Text = "Fans Speed Control";
+            this.grpMain.Text = "iDRAC";
             // 
-            // lblPassword
+            // tableLayoutPanel1
             // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(332, 37);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(53, 12);
-            this.lblPassword.TabIndex = 11;
-            this.lblPassword.Text = "Password";
+            this.tableLayoutPanel1.ColumnCount = 8;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Controls.Add(this.about_button, 7, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblIp, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btnVisitDellService, 6, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txtPassword, 5, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblPassword, 4, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txtIp, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblUser, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txtUser, 3, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 17);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(856, 43);
+            this.tableLayoutPanel1.TabIndex = 12;
+            // 
+            // lblIp
+            // 
+            this.lblIp.AutoSize = true;
+            this.lblIp.Location = new System.Drawing.Point(3, 0);
+            this.lblIp.Name = "lblIp";
+            this.lblIp.Size = new System.Drawing.Size(17, 12);
+            this.lblIp.TabIndex = 6;
+            this.lblIp.Text = "IP";
+            // 
+            // btnVisitDellService
+            // 
+            this.btnVisitDellService.Location = new System.Drawing.Point(438, 3);
+            this.btnVisitDellService.Name = "btnVisitDellService";
+            this.btnVisitDellService.Size = new System.Drawing.Size(213, 27);
+            this.btnVisitDellService.TabIndex = 7;
+            this.btnVisitDellService.Text = "Visit Dell iDRAC WEB Console";
+            this.btnVisitDellService.UseVisualStyleBackColor = true;
+            this.btnVisitDellService.Click += new System.EventHandler(this.btnVisitDellService_Click);
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(391, 34);
+            this.txtPassword.Location = new System.Drawing.Point(332, 3);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(100, 21);
@@ -104,10 +137,28 @@
             this.txtPassword.Text = "root";
             this.txtPassword.LostFocus += new System.EventHandler(this.TxtPassword_LostFocus);
             // 
+            // lblPassword
+            // 
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Location = new System.Drawing.Point(273, 0);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(53, 12);
+            this.lblPassword.TabIndex = 11;
+            this.lblPassword.Text = "Password";
+            // 
+            // txtIp
+            // 
+            this.txtIp.Location = new System.Drawing.Point(26, 3);
+            this.txtIp.Name = "txtIp";
+            this.txtIp.Size = new System.Drawing.Size(100, 21);
+            this.txtIp.TabIndex = 5;
+            this.txtIp.Text = "192.168.0.1";
+            this.txtIp.LostFocus += new System.EventHandler(this.TxtIp_LostFocus);
+            // 
             // lblUser
             // 
             this.lblUser.AutoSize = true;
-            this.lblUser.Location = new System.Drawing.Point(172, 37);
+            this.lblUser.Location = new System.Drawing.Point(132, 0);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(29, 12);
             this.lblUser.TabIndex = 9;
@@ -115,55 +166,29 @@
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(207, 34);
+            this.txtUser.Location = new System.Drawing.Point(167, 3);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(100, 21);
             this.txtUser.TabIndex = 8;
             this.txtUser.Text = "root";
             this.txtUser.LostFocus += new System.EventHandler(this.TxtUser_LostFocus);
             // 
-            // btnVisitDellService
-            // 
-            this.btnVisitDellService.Location = new System.Drawing.Point(47, 72);
-            this.btnVisitDellService.Name = "btnVisitDellService";
-            this.btnVisitDellService.Size = new System.Drawing.Size(213, 21);
-            this.btnVisitDellService.TabIndex = 7;
-            this.btnVisitDellService.Text = "Visit Dell iDRAC WEB Console";
-            this.btnVisitDellService.UseVisualStyleBackColor = true;
-            this.btnVisitDellService.Click += new System.EventHandler(this.btnVisitDellService_Click);
-            // 
-            // lblIp
-            // 
-            this.lblIp.AutoSize = true;
-            this.lblIp.Location = new System.Drawing.Point(15, 37);
-            this.lblIp.Name = "lblIp";
-            this.lblIp.Size = new System.Drawing.Size(17, 12);
-            this.lblIp.TabIndex = 6;
-            this.lblIp.Text = "IP";
-            // 
-            // txtIp
-            // 
-            this.txtIp.Location = new System.Drawing.Point(47, 34);
-            this.txtIp.Name = "txtIp";
-            this.txtIp.Size = new System.Drawing.Size(100, 21);
-            this.txtIp.TabIndex = 5;
-            this.txtIp.Text = "192.168.0.1";
-            this.txtIp.LostFocus += new System.EventHandler(this.TxtIp_LostFocus);
-            // 
             // trkBarSpeed
             // 
-            this.trkBarSpeed.Location = new System.Drawing.Point(17, 116);
+            this.trkBarSpeed.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.trkBarSpeed.Location = new System.Drawing.Point(70, 20);
             this.trkBarSpeed.Maximum = 100;
             this.trkBarSpeed.Name = "trkBarSpeed";
-            this.trkBarSpeed.Size = new System.Drawing.Size(500, 45);
+            this.trkBarSpeed.Size = new System.Drawing.Size(785, 45);
             this.trkBarSpeed.TabIndex = 4;
             this.trkBarSpeed.Scroll += new System.EventHandler(this.trkBarSpeed_Scroll);
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(300, 167);
+            this.btnReset.Location = new System.Drawing.Point(155, 71);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(200, 40);
+            this.btnReset.Size = new System.Drawing.Size(131, 22);
             this.btnReset.TabIndex = 3;
             this.btnReset.Text = "Reset to Auto Mode";
             this.btnReset.UseVisualStyleBackColor = true;
@@ -171,9 +196,9 @@
             // 
             // btnSet
             // 
-            this.btnSet.Location = new System.Drawing.Point(41, 167);
+            this.btnSet.Location = new System.Drawing.Point(9, 71);
             this.btnSet.Name = "btnSet";
-            this.btnSet.Size = new System.Drawing.Size(200, 40);
+            this.btnSet.Size = new System.Drawing.Size(131, 22);
             this.btnSet.TabIndex = 2;
             this.btnSet.Text = "Set Speed";
             this.btnSet.UseVisualStyleBackColor = true;
@@ -182,67 +207,17 @@
             // nbrUpDownSpeed
             // 
             this.nbrUpDownSpeed.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nbrUpDownSpeed.Location = new System.Drawing.Point(533, 116);
+            this.nbrUpDownSpeed.Location = new System.Drawing.Point(9, 20);
             this.nbrUpDownSpeed.Name = "nbrUpDownSpeed";
-            this.nbrUpDownSpeed.Size = new System.Drawing.Size(50, 21);
+            this.nbrUpDownSpeed.Size = new System.Drawing.Size(55, 21);
             this.nbrUpDownSpeed.TabIndex = 1;
             this.nbrUpDownSpeed.ValueChanged += new System.EventHandler(this.nbrUpDownSpeed_ValueChanged);
             // 
-            // lblTip
-            // 
-            this.lblTip.AutoSize = true;
-            this.lblTip.Location = new System.Drawing.Point(13, 267);
-            this.lblTip.Name = "lblTip";
-            this.lblTip.Size = new System.Drawing.Size(485, 36);
-            this.lblTip.TabIndex = 2;
-            this.lblTip.Text = "拖动上面的滑块为您需要的百分比数值，则服务器风扇转速将会固定为您指定的百分比数值\r\n（注意：风扇实际转速 = 风扇最高转速 * 该百分比数值，\r\n戴尔原厂标配12" +
-    "V电压规格的风扇最高转速通常为 12000 RPM）";
-            // 
-            // lnkRepo
-            // 
-            this.lnkRepo.AutoSize = true;
-            this.lnkRepo.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.lnkRepo.Location = new System.Drawing.Point(10, 640);
-            this.lnkRepo.Name = "lnkRepo";
-            this.lnkRepo.Size = new System.Drawing.Size(281, 12);
-            this.lnkRepo.TabIndex = 3;
-            this.lnkRepo.TabStop = true;
-            this.lnkRepo.Text = "https://github.com/cw1997/dell_fans_controller";
-            this.lnkRepo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkRepo_LinkClicked);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 324);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(557, 24);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "若需要恢复到自动转速模式，点击上面的“Reset to auto mode”即可\r\n自动转速模式下，由服务器内部的传感器根据温度情况自动调整转速，这也是戴尔服务器" +
-    "的出厂默认模式";
-            // 
-            // lnkMyWebsite
-            // 
-            this.lnkMyWebsite.AutoSize = true;
-            this.lnkMyWebsite.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
-            this.lnkMyWebsite.Location = new System.Drawing.Point(399, 640);
-            this.lnkMyWebsite.Name = "lnkMyWebsite";
-            this.lnkMyWebsite.Size = new System.Drawing.Size(113, 12);
-            this.lnkMyWebsite.TabIndex = 5;
-            this.lnkMyWebsite.TabStop = true;
-            this.lnkMyWebsite.Text = "http://changwei.me";
-            this.lnkMyWebsite.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkMyWebsite_LinkClicked);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(523, 640);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 12);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Code By cw1997";
-            // 
             // lstViewSensor
             // 
+            this.lstViewSensor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lstViewSensor.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.colKey,
             this.colValue,
@@ -251,64 +226,60 @@
             this.colFaultThresholdMin,
             this.colWarningThresholdMin,
             this.colWarningThresholdMax,
-            this.colFaultThresholdMax,
-            this.colExtra});
+            this.colFaultThresholdMax});
             this.lstViewSensor.FullRowSelect = true;
             this.lstViewSensor.GridLines = true;
             this.lstViewSensor.HideSelection = false;
-            this.lstViewSensor.Location = new System.Drawing.Point(12, 395);
+            this.lstViewSensor.Location = new System.Drawing.Point(6, 42);
             this.lstViewSensor.Name = "lstViewSensor";
-            this.lstViewSensor.Size = new System.Drawing.Size(600, 226);
+            this.lstViewSensor.Size = new System.Drawing.Size(848, 488);
             this.lstViewSensor.TabIndex = 7;
             this.lstViewSensor.UseCompatibleStateImageBehavior = false;
             this.lstViewSensor.View = System.Windows.Forms.View.Details;
             // 
             // colKey
             // 
-            this.colKey.Text = "Key";
-            this.colKey.Width = 100;
+            this.colKey.Text = "探测器";
+            this.colKey.Width = 120;
             // 
             // colValue
             // 
-            this.colValue.Text = "Value";
+            this.colValue.Text = "读数";
             this.colValue.Width = 100;
             // 
             // colUnit
             // 
-            this.colUnit.Text = "Unit";
+            this.colUnit.Text = "单位";
+            this.colUnit.Width = 100;
             // 
             // colStatus
             // 
-            this.colStatus.Text = "Status";
+            this.colStatus.Text = "状态";
             // 
             // colFaultThresholdMin
             // 
-            this.colFaultThresholdMin.Text = "FaultThresholdMin";
+            this.colFaultThresholdMin.Text = "Fault下限";
             this.colFaultThresholdMin.Width = 78;
             // 
             // colWarningThresholdMin
             // 
-            this.colWarningThresholdMin.Text = "WarningThresholdMin";
+            this.colWarningThresholdMin.Text = "警告下限";
             this.colWarningThresholdMin.Width = 79;
             // 
             // colWarningThresholdMax
             // 
-            this.colWarningThresholdMax.Text = "WarningThresholdMax";
+            this.colWarningThresholdMax.Text = "警告上限";
             this.colWarningThresholdMax.Width = 80;
             // 
             // colFaultThresholdMax
             // 
-            this.colFaultThresholdMax.Text = "FaultThresholdMax";
+            this.colFaultThresholdMax.Text = "Fault上限";
             this.colFaultThresholdMax.Width = 74;
-            // 
-            // colExtra
-            // 
-            this.colExtra.Text = "Extra";
             // 
             // nbrUpDownAutoRefresh
             // 
             this.nbrUpDownAutoRefresh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nbrUpDownAutoRefresh.Location = new System.Drawing.Point(132, 368);
+            this.nbrUpDownAutoRefresh.Location = new System.Drawing.Point(230, 17);
             this.nbrUpDownAutoRefresh.Name = "nbrUpDownAutoRefresh";
             this.nbrUpDownAutoRefresh.Size = new System.Drawing.Size(50, 21);
             this.nbrUpDownAutoRefresh.TabIndex = 12;
@@ -323,7 +294,7 @@
             // lblAutoRefresh
             // 
             this.lblAutoRefresh.AutoSize = true;
-            this.lblAutoRefresh.Location = new System.Drawing.Point(13, 370);
+            this.lblAutoRefresh.Location = new System.Drawing.Point(111, 19);
             this.lblAutoRefresh.Name = "lblAutoRefresh";
             this.lblAutoRefresh.Size = new System.Drawing.Size(113, 12);
             this.lblAutoRefresh.TabIndex = 12;
@@ -333,7 +304,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(188, 370);
+            this.label3.Location = new System.Drawing.Point(286, 24);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 12);
             this.label3.TabIndex = 13;
@@ -342,42 +313,96 @@
             // 
             // btnRefreshNow
             // 
-            this.btnRefreshNow.Location = new System.Drawing.Point(433, 366);
+            this.btnRefreshNow.Location = new System.Drawing.Point(6, 15);
             this.btnRefreshNow.Name = "btnRefreshNow";
-            this.btnRefreshNow.Size = new System.Drawing.Size(179, 21);
+            this.btnRefreshNow.Size = new System.Drawing.Size(99, 21);
             this.btnRefreshNow.TabIndex = 12;
             this.btnRefreshNow.Text = "Refresh Now";
             this.btnRefreshNow.UseVisualStyleBackColor = true;
             this.btnRefreshNow.Click += new System.EventHandler(this.btnRefreshNow_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.trkBarSpeed);
+            this.groupBox1.Controls.Add(this.nbrUpDownSpeed);
+            this.groupBox1.Controls.Add(this.btnSet);
+            this.groupBox1.Controls.Add(this.btnReset);
+            this.groupBox1.Location = new System.Drawing.Point(12, 81);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(862, 101);
+            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Fans Speed Control";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.progressBar);
+            this.groupBox2.Controls.Add(this.btnRefreshNow);
+            this.groupBox2.Controls.Add(this.lstViewSensor);
+            this.groupBox2.Controls.Add(this.nbrUpDownAutoRefresh);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.lblAutoRefresh);
+            this.groupBox2.Location = new System.Drawing.Point(13, 188);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(861, 536);
+            this.groupBox2.TabIndex = 15;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "States";
+            // 
+            // background_FetchStates
+            // 
+            this.background_FetchStates.WorkerReportsProgress = true;
+            this.background_FetchStates.DoWork += new System.ComponentModel.DoWorkEventHandler(this.background_FetchStates_DoWork);
+            this.background_FetchStates.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.background_FetchStates_ProgressChanged);
+            // 
+            // progressBar
+            // 
+            this.progressBar.Location = new System.Drawing.Point(542, 17);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(312, 23);
+            this.progressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.progressBar.TabIndex = 24;
+            // 
+            // about_button
+            // 
+            this.about_button.Location = new System.Drawing.Point(657, 3);
+            this.about_button.Name = "about_button";
+            this.about_button.Size = new System.Drawing.Size(91, 27);
+            this.about_button.TabIndex = 13;
+            this.about_button.Text = "About";
+            this.about_button.UseVisualStyleBackColor = true;
+            this.about_button.Click += new System.EventHandler(this.about_button_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 661);
-            this.Controls.Add(this.btnRefreshNow);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.lblAutoRefresh);
-            this.Controls.Add(this.nbrUpDownAutoRefresh);
-            this.Controls.Add(this.lstViewSensor);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.lnkMyWebsite);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lnkRepo);
-            this.Controls.Add(this.lblTip);
+            this.ClientSize = new System.Drawing.Size(886, 736);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grpMain);
             this.HelpButton = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.Text = "Dell Fans Speed Controller";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.grpMain.ResumeLayout(false);
-            this.grpMain.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trkBarSpeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nbrUpDownSpeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nbrUpDownAutoRefresh)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -387,11 +412,6 @@
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnSet;
         private System.Windows.Forms.NumericUpDown nbrUpDownSpeed;
-        private System.Windows.Forms.Label lblTip;
-        private System.Windows.Forms.LinkLabel lnkRepo;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.LinkLabel lnkMyWebsite;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnVisitDellService;
         private System.Windows.Forms.Label lblIp;
         private System.Windows.Forms.TextBox txtIp;
@@ -407,12 +427,17 @@
         private System.Windows.Forms.ColumnHeader colWarningThresholdMin;
         private System.Windows.Forms.ColumnHeader colWarningThresholdMax;
         private System.Windows.Forms.ColumnHeader colFaultThresholdMax;
-        private System.Windows.Forms.ColumnHeader colExtra;
         private System.Windows.Forms.Label lblAutoRefresh;
         private System.Windows.Forms.NumericUpDown nbrUpDownAutoRefresh;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnRefreshNow;
         private System.Windows.Forms.ColumnHeader colKey;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.ComponentModel.BackgroundWorker background_FetchStates;
+        private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.Button about_button;
     }
 }
 

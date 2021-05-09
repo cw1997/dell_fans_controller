@@ -6,18 +6,19 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace dell_fans_controller
 {
     public partial class frmMain : Form
     {
-        private static string version = "v1.0.0";
+        private static string version = "v1.0.1";
 
         private static string currentPath = Application.StartupPath; // System.Environment.CurrentDirectory;
         private static string configFileName = "\\config.ini";
         private static string explorer = "explorer";
-        private static string ipmitoolPath = currentPath + "\\Dell\\SysMgt\\bmc\\ipmitool.exe";
+        private static string ipmitoolPath = currentPath + "\\ipmitool.exe";
         private static string configFilePath = currentPath + configFileName;
 
         private static string defaultIp = "127.0.0.1";
@@ -89,7 +90,7 @@ namespace dell_fans_controller
                 txtUser.Text = defaultUser;
                 txtPassword.Text = defaultPassword;
             }
-            
+            this.progressBar.Visible = false;
         }
 
         private void nbrUpDownSpeed_ValueChanged(object sender, EventArgs e)
@@ -106,6 +107,7 @@ namespace dell_fans_controller
             string parametersReset = string.Format("-I lanplus -H {0} -U {1} -P {2} raw 0x30 0x30 0x01 0x01", ip, user, password);
 
             string fullExecuteReset = ipmitoolPath + " " + parametersReset;
+
             execute(fullExecuteReset);
         }
 
@@ -138,16 +140,7 @@ namespace dell_fans_controller
             //string cmdParameters = string.Format(cmdFormat, ipmitoolPath, parametersDisableAutoMode, ipmitoolPath, parametersSetSpeed);
 
             //Process.Start("cmd", cmdParameters);
-        }
 
-        private void lnkRepo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Process.Start(explorer, lnkRepo.Text);
-        }
-
-        private void lnkMyWebsite_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Process.Start(explorer, lnkMyWebsite.Text);
         }
 
         private void btnVisitDellService_Click(object sender, EventArgs e)
@@ -160,27 +153,10 @@ namespace dell_fans_controller
             nbrUpDownSpeed.Value = trkBarSpeed.Value;
         }
 
+
         private void btnRefreshNow_Click(object sender, EventArgs e)
         {
-            string ip = txtIp.Text;
-            string user = txtUser.Text;
-            string password = txtPassword.Text;
-
-            string formatSensor = "-I lanplus -H {0} -U {1} -P {2} sensor";
-            string parametersSensor = string.Format(formatSensor, ip, user, password);
-
-            string fullExecuteSensor = ipmitoolPath + " " + parametersSensor;
-            string result = execute(fullExecuteSensor);
-
-            result = result.Replace("\r\n", "\n");
-            string[] sensorList = result.Split('\n', '\r');
-
-            lstViewSensor.Items.Clear();
-            foreach (var item in sensorList) {
-                if (item.Contains("Temp") || item.Contains("RPM") || item.Contains("Voltage") || item.Contains("Current")) {
-                    lstViewSensor.Items.Add(new ListViewItem(item.Split('|')));
-                }
-            }
+            background_FetchStates.RunWorkerAsync();
         }
 
         private void TxtIp_LostFocus(object sender, EventArgs e)
@@ -202,6 +178,73 @@ namespace dell_fans_controller
         {
 
             this.Text += " " + version;
+        }
+
+        private void background_FetchStates_DoWork(object sender, DoWorkEventArgs e)
+        {
+            BackgroundWorker bgWorker = sender as BackgroundWorker;
+
+            bgWorker.ReportProgress(0, "start");
+
+            string ip = txtIp.Text;
+            string user = txtUser.Text;
+            string password = txtPassword.Text;
+
+            string formatSensor = "-I lanplus -H {0} -U {1} -P {2} sensor";
+            string parametersSensor = string.Format(formatSensor, ip, user, password);
+
+            string fullExecuteSensor = ipmitoolPath + " " + parametersSensor;
+            string result = execute(fullExecuteSensor);
+
+            result = result.Replace("\r\n", "\n");
+            string[] sensorList = result.Split('\n', '\r');
+
+            foreach (var item in sensorList)
+            {
+                if (item.Contains("Temp") || item.Contains("RPM") || item.Contains("Voltage") || item.Contains("Current"))
+                {
+                    string[] temp = new string[8];
+                    var src = item.Split('|');
+                    temp[0] = src[0];
+                    temp[1] = src[1];
+                    temp[2] = src[2];
+                    temp[3] = src[3];
+                    temp[4] = src[5];
+                    temp[5] = src[6];
+                    temp[6] = src[7];
+                    temp[7] = src[8];
+
+                    bgWorker.ReportProgress(1, temp);
+                    //lstViewSensor.Items.Add(new ListViewItem(temp));
+                }
+            }
+            bgWorker.ReportProgress(100, "completed");
+        }
+
+        private void background_FetchStates_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            int Percentage = e.ProgressPercentage;
+            if (Percentage == 0) 
+            {
+                this.progressBar.Visible = true;
+                lstViewSensor.Items.Clear();
+            }
+            else if (Percentage == 1)
+            {
+                // 在这里更新UI
+                string[] message = (string[])e.UserState;
+                lstViewSensor.Items.Add(new ListViewItem(message));
+            }
+            else
+            {
+                this.progressBar.Visible = false;
+            }
+
+        }
+
+        private void about_button_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Code by jiafeng5513, fork from cw1997");
         }
     }
 }
