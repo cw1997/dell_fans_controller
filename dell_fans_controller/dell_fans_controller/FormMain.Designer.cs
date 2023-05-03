@@ -64,32 +64,26 @@
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.trackBar2 = new System.Windows.Forms.TrackBar();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.trackBar3 = new System.Windows.Forms.TrackBar();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.trackBar5 = new System.Windows.Forms.TrackBar();
             this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
             this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.trackBar6 = new System.Windows.Forms.TrackBar();
             this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
             this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.trackBar9 = new System.Windows.Forms.TrackBar();
             this.numericUpDown9 = new System.Windows.Forms.NumericUpDown();
             this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
             this.grpMain.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trkBarSpeed)).BeginInit();
@@ -263,7 +257,7 @@
             this.btnSet.Name = "btnSet";
             this.btnSet.Size = new System.Drawing.Size(131, 22);
             this.btnSet.TabIndex = 2;
-            this.btnSet.Text = "Set Speed";
+            this.btnSet.Text = "Set Fans Speed";
             this.btnSet.UseVisualStyleBackColor = true;
             this.btnSet.Click += new System.EventHandler(this.btnSet_Click);
             // 
@@ -310,7 +304,7 @@
             this.lstViewSensor.HideSelection = false;
             this.lstViewSensor.Location = new System.Drawing.Point(6, 42);
             this.lstViewSensor.Name = "lstViewSensor";
-            this.lstViewSensor.Size = new System.Drawing.Size(941, 251);
+            this.lstViewSensor.Size = new System.Drawing.Size(936, 251);
             this.lstViewSensor.TabIndex = 7;
             this.lstViewSensor.UseCompatibleStateImageBehavior = false;
             this.lstViewSensor.View = System.Windows.Forms.View.Details;
@@ -407,12 +401,12 @@
             this.groupBox1.Controls.Add(this.nbrUpDownSpeed);
             this.groupBox1.Controls.Add(this.btnSet);
             this.groupBox1.Controls.Add(this.btnReset);
-            this.groupBox1.Location = new System.Drawing.Point(12, 81);
+            this.groupBox1.Location = new System.Drawing.Point(12, 87);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(955, 68);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Fans Speed Control";
+            this.groupBox1.Text = "Fans Speed Control (%)";
             // 
             // groupBox2
             // 
@@ -434,7 +428,7 @@
             // 
             // progressBar
             // 
-            this.progressBar.Location = new System.Drawing.Point(542, 17);
+            this.progressBar.Location = new System.Drawing.Point(630, 13);
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(312, 23);
             this.progressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
@@ -453,13 +447,12 @@
             this.groupBox3.Controls.Add(this.trackBar1);
             this.groupBox3.Controls.Add(this.numericUpDown1);
             this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Controls.Add(this.button2);
-            this.groupBox3.Location = new System.Drawing.Point(12, 155);
+            this.groupBox3.Location = new System.Drawing.Point(12, 161);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(955, 68);
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Fans Speed Control";
+            this.groupBox3.Text = "Fan_0 Speed Control (%)";
             // 
             // trackBar1
             // 
@@ -505,17 +498,8 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(131, 22);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Set Speed";
+            this.button1.Text = "Set Fan_0 Speed";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(812, 22);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(131, 22);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Reset to Auto Mode";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
@@ -524,13 +508,12 @@
             this.groupBox4.Controls.Add(this.trackBar2);
             this.groupBox4.Controls.Add(this.numericUpDown2);
             this.groupBox4.Controls.Add(this.button3);
-            this.groupBox4.Controls.Add(this.button4);
-            this.groupBox4.Location = new System.Drawing.Point(12, 303);
+            this.groupBox4.Location = new System.Drawing.Point(12, 309);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(955, 68);
             this.groupBox4.TabIndex = 16;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Fans Speed Control";
+            this.groupBox4.Text = "Fan_2 Speed Control (%)";
             // 
             // trackBar2
             // 
@@ -564,6 +547,7 @@
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(55, 21);
             this.numericUpDown2.TabIndex = 1;
+            this.numericUpDown2.Tag = "";
             this.numericUpDown2.Value = new decimal(new int[] {
             20,
             0,
@@ -576,17 +560,8 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(131, 22);
             this.button3.TabIndex = 2;
-            this.button3.Text = "Set Speed";
+            this.button3.Text = "Set Fan_2 Speed";
             this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(812, 22);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(131, 22);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Reset to Auto Mode";
-            this.button4.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
@@ -595,13 +570,12 @@
             this.groupBox5.Controls.Add(this.trackBar3);
             this.groupBox5.Controls.Add(this.numericUpDown3);
             this.groupBox5.Controls.Add(this.button5);
-            this.groupBox5.Controls.Add(this.button6);
-            this.groupBox5.Location = new System.Drawing.Point(12, 378);
+            this.groupBox5.Location = new System.Drawing.Point(12, 384);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(955, 68);
             this.groupBox5.TabIndex = 16;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Fans Speed Control";
+            this.groupBox5.Text = "Fan_3 Speed Control (%)";
             // 
             // trackBar3
             // 
@@ -647,17 +621,8 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(131, 22);
             this.button5.TabIndex = 2;
-            this.button5.Text = "Set Speed";
+            this.button5.Text = "Set Fan_4 Speed";
             this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(812, 22);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(131, 22);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "Reset to Auto Mode";
-            this.button6.UseVisualStyleBackColor = true;
             // 
             // groupBox7
             // 
@@ -666,13 +631,12 @@
             this.groupBox7.Controls.Add(this.trackBar5);
             this.groupBox7.Controls.Add(this.numericUpDown5);
             this.groupBox7.Controls.Add(this.button9);
-            this.groupBox7.Controls.Add(this.button10);
-            this.groupBox7.Location = new System.Drawing.Point(12, 452);
+            this.groupBox7.Location = new System.Drawing.Point(12, 458);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(955, 68);
             this.groupBox7.TabIndex = 16;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Fans Speed Control";
+            this.groupBox7.Text = "Fan_4 Speed Control (%)";
             // 
             // trackBar5
             // 
@@ -718,17 +682,8 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(131, 22);
             this.button9.TabIndex = 2;
-            this.button9.Text = "Set Speed";
+            this.button9.Text = "Set Fan_4 Speed";
             this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.button10.Location = new System.Drawing.Point(812, 22);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(131, 22);
-            this.button10.TabIndex = 3;
-            this.button10.Text = "Reset to Auto Mode";
-            this.button10.UseVisualStyleBackColor = true;
             // 
             // groupBox8
             // 
@@ -737,13 +692,12 @@
             this.groupBox8.Controls.Add(this.trackBar6);
             this.groupBox8.Controls.Add(this.numericUpDown6);
             this.groupBox8.Controls.Add(this.button11);
-            this.groupBox8.Controls.Add(this.button12);
-            this.groupBox8.Location = new System.Drawing.Point(12, 526);
+            this.groupBox8.Location = new System.Drawing.Point(12, 532);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(955, 68);
             this.groupBox8.TabIndex = 16;
             this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Fans Speed Control";
+            this.groupBox8.Text = "Fan_5 Speed Control (%)";
             // 
             // trackBar6
             // 
@@ -789,17 +743,8 @@
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(131, 22);
             this.button11.TabIndex = 2;
-            this.button11.Text = "Set Speed";
+            this.button11.Text = "Set Fan_5 Speed";
             this.button11.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.Location = new System.Drawing.Point(812, 22);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(131, 22);
-            this.button12.TabIndex = 3;
-            this.button12.Text = "Reset to Auto Mode";
-            this.button12.UseVisualStyleBackColor = true;
             // 
             // groupBox11
             // 
@@ -808,13 +753,12 @@
             this.groupBox11.Controls.Add(this.trackBar9);
             this.groupBox11.Controls.Add(this.numericUpDown9);
             this.groupBox11.Controls.Add(this.button17);
-            this.groupBox11.Controls.Add(this.button18);
-            this.groupBox11.Location = new System.Drawing.Point(12, 229);
+            this.groupBox11.Location = new System.Drawing.Point(12, 235);
             this.groupBox11.Name = "groupBox11";
             this.groupBox11.Size = new System.Drawing.Size(955, 68);
             this.groupBox11.TabIndex = 16;
             this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "Fans Speed Control";
+            this.groupBox11.Text = "Fan_1 Speed Control (%)";
             // 
             // trackBar9
             // 
@@ -860,17 +804,8 @@
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(131, 22);
             this.button17.TabIndex = 2;
-            this.button17.Text = "Set Speed";
+            this.button17.Text = "Set Fan_1 Speed";
             this.button17.UseVisualStyleBackColor = true;
-            // 
-            // button18
-            // 
-            this.button18.Location = new System.Drawing.Point(812, 22);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(131, 22);
-            this.button18.TabIndex = 3;
-            this.button18.Text = "Reset to Auto Mode";
-            this.button18.UseVisualStyleBackColor = true;
             // 
             // frmMain
             // 
@@ -966,32 +901,26 @@
         private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TrackBar trackBar2;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.TrackBar trackBar3;
         private System.Windows.Forms.NumericUpDown numericUpDown3;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.TrackBar trackBar5;
         private System.Windows.Forms.NumericUpDown numericUpDown5;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.TrackBar trackBar6;
         private System.Windows.Forms.NumericUpDown numericUpDown6;
         private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.TrackBar trackBar9;
         private System.Windows.Forms.NumericUpDown numericUpDown9;
         private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
     }
 }
 
