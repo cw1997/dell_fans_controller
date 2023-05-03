@@ -76,7 +76,7 @@
             this.grpMain.Controls.Add(this.tableLayoutPanel1);
             this.grpMain.Location = new System.Drawing.Point(12, 12);
             this.grpMain.Name = "grpMain";
-            this.grpMain.Size = new System.Drawing.Size(862, 63);
+            this.grpMain.Size = new System.Drawing.Size(959, 63);
             this.grpMain.TabIndex = 1;
             this.grpMain.TabStop = false;
             this.grpMain.Text = "iDRAC";
@@ -93,19 +93,19 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 202F));
             this.tableLayoutPanel1.Controls.Add(this.about_button, 7, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblIp, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnVisitDellService, 6, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtPassword, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblPassword, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtIp, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblUser, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtUser, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lblIp, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 17);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(856, 43);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(953, 43);
             this.tableLayoutPanel1.TabIndex = 12;
             // 
             // about_button
@@ -187,16 +187,21 @@
             // 
             this.trkBarSpeed.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.trkBarSpeed.Location = new System.Drawing.Point(70, 20);
+            this.trkBarSpeed.Location = new System.Drawing.Point(8, 20);
             this.trkBarSpeed.Maximum = 100;
+            this.trkBarSpeed.Minimum = 10;
             this.trkBarSpeed.Name = "trkBarSpeed";
-            this.trkBarSpeed.Size = new System.Drawing.Size(785, 45);
+            this.trkBarSpeed.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.trkBarSpeed.Size = new System.Drawing.Size(584, 45);
+            this.trkBarSpeed.SmallChange = 5;
             this.trkBarSpeed.TabIndex = 4;
+            this.trkBarSpeed.TickFrequency = 5;
+            this.trkBarSpeed.Value = 20;
             this.trkBarSpeed.Scroll += new System.EventHandler(this.trkBarSpeed_Scroll);
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(155, 71);
+            this.btnReset.Location = new System.Drawing.Point(812, 22);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(131, 22);
             this.btnReset.TabIndex = 3;
@@ -206,7 +211,7 @@
             // 
             // btnSet
             // 
-            this.btnSet.Location = new System.Drawing.Point(9, 71);
+            this.btnSet.Location = new System.Drawing.Point(675, 22);
             this.btnSet.Name = "btnSet";
             this.btnSet.Size = new System.Drawing.Size(131, 22);
             this.btnSet.TabIndex = 2;
@@ -217,10 +222,25 @@
             // nbrUpDownSpeed
             // 
             this.nbrUpDownSpeed.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nbrUpDownSpeed.Location = new System.Drawing.Point(9, 20);
+            this.nbrUpDownSpeed.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.nbrUpDownSpeed.Location = new System.Drawing.Point(599, 23);
+            this.nbrUpDownSpeed.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             this.nbrUpDownSpeed.Name = "nbrUpDownSpeed";
             this.nbrUpDownSpeed.Size = new System.Drawing.Size(55, 21);
             this.nbrUpDownSpeed.TabIndex = 1;
+            this.nbrUpDownSpeed.Value = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
             this.nbrUpDownSpeed.ValueChanged += new System.EventHandler(this.nbrUpDownSpeed_ValueChanged);
             // 
             // lstViewSensor
@@ -242,7 +262,7 @@
             this.lstViewSensor.HideSelection = false;
             this.lstViewSensor.Location = new System.Drawing.Point(6, 42);
             this.lstViewSensor.Name = "lstViewSensor";
-            this.lstViewSensor.Size = new System.Drawing.Size(848, 488);
+            this.lstViewSensor.Size = new System.Drawing.Size(945, 229);
             this.lstViewSensor.TabIndex = 7;
             this.lstViewSensor.UseCompatibleStateImageBehavior = false;
             this.lstViewSensor.View = System.Windows.Forms.View.Details;
@@ -341,7 +361,7 @@
             this.groupBox1.Controls.Add(this.btnReset);
             this.groupBox1.Location = new System.Drawing.Point(12, 81);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(862, 101);
+            this.groupBox1.Size = new System.Drawing.Size(959, 68);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Fans Speed Control";
@@ -357,9 +377,9 @@
             this.groupBox2.Controls.Add(this.nbrUpDownAutoRefresh);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.lblAutoRefresh);
-            this.groupBox2.Location = new System.Drawing.Point(13, 188);
+            this.groupBox2.Location = new System.Drawing.Point(13, 634);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(861, 536);
+            this.groupBox2.Size = new System.Drawing.Size(958, 277);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "States";
@@ -382,7 +402,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(886, 736);
+            this.ClientSize = new System.Drawing.Size(983, 923);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grpMain);
