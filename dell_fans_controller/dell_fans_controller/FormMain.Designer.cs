@@ -84,6 +84,11 @@
             this.trkBarSpeed2 = new System.Windows.Forms.TrackBar();
             this.nbrUpDownSpeed2 = new System.Windows.Forms.NumericUpDown();
             this.btnSet2 = new System.Windows.Forms.Button();
+            this.mode1 = new System.Windows.Forms.Button();
+            this.mode2 = new System.Windows.Forms.Button();
+            this.mode3 = new System.Windows.Forms.Button();
+            this.mode4 = new System.Windows.Forms.Button();
+            this.mode5 = new System.Windows.Forms.Button();
             this.grpMain.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trkBarSpeed)).BeginInit();
@@ -243,12 +248,14 @@
             // 
             // btnReset
             // 
+            this.btnReset.BackColor = System.Drawing.Color.IndianRed;
+            this.btnReset.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnReset.Location = new System.Drawing.Point(675, 39);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(131, 22);
             this.btnReset.TabIndex = 3;
             this.btnReset.Text = "Reset to Auto Mode";
-            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnSet
@@ -304,7 +311,7 @@
             this.lstViewSensor.HideSelection = false;
             this.lstViewSensor.Location = new System.Drawing.Point(6, 42);
             this.lstViewSensor.Name = "lstViewSensor";
-            this.lstViewSensor.Size = new System.Drawing.Size(798, 326);
+            this.lstViewSensor.Size = new System.Drawing.Size(798, 355);
             this.lstViewSensor.TabIndex = 7;
             this.lstViewSensor.UseCompatibleStateImageBehavior = false;
             this.lstViewSensor.View = System.Windows.Forms.View.Details;
@@ -420,9 +427,9 @@
             this.groupBox7.Controls.Add(this.nbrUpDownAutoRefresh);
             this.groupBox7.Controls.Add(this.label3);
             this.groupBox7.Controls.Add(this.lblAutoRefresh);
-            this.groupBox7.Location = new System.Drawing.Point(13, 612);
+            this.groupBox7.Location = new System.Drawing.Point(13, 646);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(816, 374);
+            this.groupBox7.Size = new System.Drawing.Size(816, 403);
             this.groupBox7.TabIndex = 15;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "States";
@@ -826,11 +833,61 @@
             this.btnSet2.UseVisualStyleBackColor = true;
             this.btnSet2.Click += new System.EventHandler(this.btnSet2_Click);
             // 
+            // mode1
+            // 
+            this.mode1.Location = new System.Drawing.Point(37, 615);
+            this.mode1.Name = "mode1";
+            this.mode1.Size = new System.Drawing.Size(131, 22);
+            this.mode1.TabIndex = 17;
+            this.mode1.Text = "Silent Mode";
+            this.mode1.UseVisualStyleBackColor = true;
+            // 
+            // mode2
+            // 
+            this.mode2.Location = new System.Drawing.Point(194, 615);
+            this.mode2.Name = "mode2";
+            this.mode2.Size = new System.Drawing.Size(131, 22);
+            this.mode2.TabIndex = 17;
+            this.mode2.Text = "One Node Mode (L)";
+            this.mode2.UseVisualStyleBackColor = true;
+            // 
+            // mode3
+            // 
+            this.mode3.Location = new System.Drawing.Point(351, 615);
+            this.mode3.Name = "mode3";
+            this.mode3.Size = new System.Drawing.Size(131, 22);
+            this.mode3.TabIndex = 17;
+            this.mode3.Text = "One Node Mode (R)";
+            this.mode3.UseVisualStyleBackColor = true;
+            // 
+            // mode4
+            // 
+            this.mode4.Location = new System.Drawing.Point(508, 615);
+            this.mode4.Name = "mode4";
+            this.mode4.Size = new System.Drawing.Size(131, 22);
+            this.mode4.TabIndex = 17;
+            this.mode4.Text = "Two Node Mode (ECO)";
+            this.mode4.UseVisualStyleBackColor = true;
+            // 
+            // mode5
+            // 
+            this.mode5.Location = new System.Drawing.Point(665, 615);
+            this.mode5.Name = "mode5";
+            this.mode5.Size = new System.Drawing.Size(145, 22);
+            this.mode5.TabIndex = 17;
+            this.mode5.Text = "Two Node Mode (165W)";
+            this.mode5.UseVisualStyleBackColor = true;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(841, 998);
+            this.ClientSize = new System.Drawing.Size(841, 1061);
+            this.Controls.Add(this.mode5);
+            this.Controls.Add(this.mode4);
+            this.Controls.Add(this.mode3);
+            this.Controls.Add(this.mode2);
+            this.Controls.Add(this.mode1);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
@@ -940,6 +997,11 @@
         private System.Windows.Forms.TrackBar trkBarSpeed2;
         private System.Windows.Forms.NumericUpDown nbrUpDownSpeed2;
         private System.Windows.Forms.Button btnSet2;
+        private System.Windows.Forms.Button mode1;
+        private System.Windows.Forms.Button mode2;
+        private System.Windows.Forms.Button mode3;
+        private System.Windows.Forms.Button mode4;
+        private System.Windows.Forms.Button mode5;
     }
 }
 
