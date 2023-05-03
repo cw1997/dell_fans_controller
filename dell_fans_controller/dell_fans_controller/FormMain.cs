@@ -236,7 +236,7 @@ namespace dell_fans_controller
 
         private void about_button_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Code by jiafeng5513, fork from cw1997");
+            MessageBox.Show("Version: 1.0.2 (2023)\n\nCode by zzccchen, fork from cw1997 and jiafeng5513\n\nSouce code: https://github.com/zzccchen/dell_fans_controller");
         }
     }
 }

@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.grpMain = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.about_button = new System.Windows.Forms.Button();
             this.btnVisitDellService = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
@@ -39,6 +38,7 @@
             this.lblUser = new System.Windows.Forms.Label();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.lblIp = new System.Windows.Forms.Label();
+            this.about_button = new System.Windows.Forms.Button();
             this.trkBarSpeed = new System.Windows.Forms.TrackBar();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnSet = new System.Windows.Forms.Button();
@@ -118,7 +118,7 @@
             this.grpMain.Controls.Add(this.tableLayoutPanel1);
             this.grpMain.Location = new System.Drawing.Point(12, 12);
             this.grpMain.Name = "grpMain";
-            this.grpMain.Size = new System.Drawing.Size(955, 63);
+            this.grpMain.Size = new System.Drawing.Size(817, 63);
             this.grpMain.TabIndex = 1;
             this.grpMain.TabStop = false;
             this.grpMain.Text = "iDRAC";
@@ -134,7 +134,6 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 299F));
-            this.tableLayoutPanel1.Controls.Add(this.about_button, 7, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnVisitDellService, 6, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtPassword, 5, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblPassword, 4, 0);
@@ -142,23 +141,14 @@
             this.tableLayoutPanel1.Controls.Add(this.lblUser, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtUser, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblIp, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.about_button, 7, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 17);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(949, 43);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(811, 43);
             this.tableLayoutPanel1.TabIndex = 12;
-            // 
-            // about_button
-            // 
-            this.about_button.Location = new System.Drawing.Point(657, 3);
-            this.about_button.Name = "about_button";
-            this.about_button.Size = new System.Drawing.Size(91, 27);
-            this.about_button.TabIndex = 13;
-            this.about_button.Text = "About";
-            this.about_button.UseVisualStyleBackColor = true;
-            this.about_button.Click += new System.EventHandler(this.about_button_Click);
             // 
             // btnVisitDellService
             // 
@@ -225,6 +215,16 @@
             this.lblIp.TabIndex = 6;
             this.lblIp.Text = "IP";
             // 
+            // about_button
+            // 
+            this.about_button.Location = new System.Drawing.Point(657, 3);
+            this.about_button.Name = "about_button";
+            this.about_button.Size = new System.Drawing.Size(91, 27);
+            this.about_button.TabIndex = 13;
+            this.about_button.Text = "About";
+            this.about_button.UseVisualStyleBackColor = true;
+            this.about_button.Click += new System.EventHandler(this.about_button_Click);
+            // 
             // trkBarSpeed
             // 
             this.trkBarSpeed.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -234,7 +234,7 @@
             this.trkBarSpeed.Minimum = 10;
             this.trkBarSpeed.Name = "trkBarSpeed";
             this.trkBarSpeed.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.trkBarSpeed.Size = new System.Drawing.Size(580, 45);
+            this.trkBarSpeed.Size = new System.Drawing.Size(584, 45);
             this.trkBarSpeed.SmallChange = 5;
             this.trkBarSpeed.TabIndex = 4;
             this.trkBarSpeed.TickFrequency = 5;
@@ -243,7 +243,7 @@
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(812, 22);
+            this.btnReset.Location = new System.Drawing.Point(675, 39);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(131, 22);
             this.btnReset.TabIndex = 3;
@@ -253,7 +253,7 @@
             // 
             // btnSet
             // 
-            this.btnSet.Location = new System.Drawing.Point(675, 22);
+            this.btnSet.Location = new System.Drawing.Point(675, 12);
             this.btnSet.Name = "btnSet";
             this.btnSet.Size = new System.Drawing.Size(131, 22);
             this.btnSet.TabIndex = 2;
@@ -304,14 +304,14 @@
             this.lstViewSensor.HideSelection = false;
             this.lstViewSensor.Location = new System.Drawing.Point(6, 42);
             this.lstViewSensor.Name = "lstViewSensor";
-            this.lstViewSensor.Size = new System.Drawing.Size(936, 251);
+            this.lstViewSensor.Size = new System.Drawing.Size(798, 326);
             this.lstViewSensor.TabIndex = 7;
             this.lstViewSensor.UseCompatibleStateImageBehavior = false;
             this.lstViewSensor.View = System.Windows.Forms.View.Details;
             // 
             // colKey
             // 
-            this.colKey.Text = "探测器";
+            this.colKey.Text = "传感器";
             this.colKey.Width = 120;
             // 
             // colValue
@@ -327,26 +327,27 @@
             // colStatus
             // 
             this.colStatus.Text = "状态";
+            this.colStatus.Width = 65;
             // 
             // colFaultThresholdMin
             // 
             this.colFaultThresholdMin.Text = "Fault下限";
-            this.colFaultThresholdMin.Width = 78;
+            this.colFaultThresholdMin.Width = 102;
             // 
             // colWarningThresholdMin
             // 
             this.colWarningThresholdMin.Text = "警告下限";
-            this.colWarningThresholdMin.Width = 79;
+            this.colWarningThresholdMin.Width = 102;
             // 
             // colWarningThresholdMax
             // 
             this.colWarningThresholdMax.Text = "警告上限";
-            this.colWarningThresholdMax.Width = 80;
+            this.colWarningThresholdMax.Width = 102;
             // 
             // colFaultThresholdMax
             // 
             this.colFaultThresholdMax.Text = "Fault上限";
-            this.colFaultThresholdMax.Width = 74;
+            this.colFaultThresholdMax.Width = 102;
             // 
             // nbrUpDownAutoRefresh
             // 
@@ -403,7 +404,7 @@
             this.groupBox1.Controls.Add(this.btnReset);
             this.groupBox1.Location = new System.Drawing.Point(12, 87);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(955, 68);
+            this.groupBox1.Size = new System.Drawing.Size(817, 68);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Fans Speed Control (%)";
@@ -421,14 +422,14 @@
             this.groupBox2.Controls.Add(this.lblAutoRefresh);
             this.groupBox2.Location = new System.Drawing.Point(13, 612);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(954, 299);
+            this.groupBox2.Size = new System.Drawing.Size(816, 374);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "States";
             // 
             // progressBar
             // 
-            this.progressBar.Location = new System.Drawing.Point(630, 13);
+            this.progressBar.Location = new System.Drawing.Point(493, 13);
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(312, 23);
             this.progressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
@@ -449,10 +450,10 @@
             this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Location = new System.Drawing.Point(12, 161);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(955, 68);
+            this.groupBox3.Size = new System.Drawing.Size(817, 68);
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Fan_0 Speed Control (%)";
+            this.groupBox3.Text = "Fan_1 Speed Control (%)";
             // 
             // trackBar1
             // 
@@ -463,7 +464,7 @@
             this.trackBar1.Minimum = 10;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.trackBar1.Size = new System.Drawing.Size(580, 45);
+            this.trackBar1.Size = new System.Drawing.Size(584, 45);
             this.trackBar1.SmallChange = 5;
             this.trackBar1.TabIndex = 4;
             this.trackBar1.TickFrequency = 5;
@@ -498,7 +499,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(131, 22);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Set Fan_0 Speed";
+            this.button1.Text = "Set Fan_1 Speed";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // groupBox4
@@ -510,10 +511,10 @@
             this.groupBox4.Controls.Add(this.button3);
             this.groupBox4.Location = new System.Drawing.Point(12, 309);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(955, 68);
+            this.groupBox4.Size = new System.Drawing.Size(817, 68);
             this.groupBox4.TabIndex = 16;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Fan_2 Speed Control (%)";
+            this.groupBox4.Text = "Fan_3 Speed Control (%)";
             // 
             // trackBar2
             // 
@@ -524,7 +525,7 @@
             this.trackBar2.Minimum = 10;
             this.trackBar2.Name = "trackBar2";
             this.trackBar2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.trackBar2.Size = new System.Drawing.Size(580, 45);
+            this.trackBar2.Size = new System.Drawing.Size(584, 45);
             this.trackBar2.SmallChange = 5;
             this.trackBar2.TabIndex = 4;
             this.trackBar2.TickFrequency = 5;
@@ -560,7 +561,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(131, 22);
             this.button3.TabIndex = 2;
-            this.button3.Text = "Set Fan_2 Speed";
+            this.button3.Text = "Set Fan_3 Speed";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // groupBox5
@@ -572,10 +573,10 @@
             this.groupBox5.Controls.Add(this.button5);
             this.groupBox5.Location = new System.Drawing.Point(12, 384);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(955, 68);
+            this.groupBox5.Size = new System.Drawing.Size(817, 68);
             this.groupBox5.TabIndex = 16;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Fan_3 Speed Control (%)";
+            this.groupBox5.Text = "Fan_4 Speed Control (%)";
             // 
             // trackBar3
             // 
@@ -586,7 +587,7 @@
             this.trackBar3.Minimum = 10;
             this.trackBar3.Name = "trackBar3";
             this.trackBar3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.trackBar3.Size = new System.Drawing.Size(580, 45);
+            this.trackBar3.Size = new System.Drawing.Size(584, 45);
             this.trackBar3.SmallChange = 5;
             this.trackBar3.TabIndex = 4;
             this.trackBar3.TickFrequency = 5;
@@ -633,10 +634,10 @@
             this.groupBox7.Controls.Add(this.button9);
             this.groupBox7.Location = new System.Drawing.Point(12, 458);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(955, 68);
+            this.groupBox7.Size = new System.Drawing.Size(817, 68);
             this.groupBox7.TabIndex = 16;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Fan_4 Speed Control (%)";
+            this.groupBox7.Text = "Fan_5 Speed Control (%)";
             // 
             // trackBar5
             // 
@@ -647,7 +648,7 @@
             this.trackBar5.Minimum = 10;
             this.trackBar5.Name = "trackBar5";
             this.trackBar5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.trackBar5.Size = new System.Drawing.Size(580, 45);
+            this.trackBar5.Size = new System.Drawing.Size(584, 45);
             this.trackBar5.SmallChange = 5;
             this.trackBar5.TabIndex = 4;
             this.trackBar5.TickFrequency = 5;
@@ -682,7 +683,7 @@
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(131, 22);
             this.button9.TabIndex = 2;
-            this.button9.Text = "Set Fan_4 Speed";
+            this.button9.Text = "Set Fan_5 Speed";
             this.button9.UseVisualStyleBackColor = true;
             // 
             // groupBox8
@@ -694,10 +695,10 @@
             this.groupBox8.Controls.Add(this.button11);
             this.groupBox8.Location = new System.Drawing.Point(12, 532);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(955, 68);
+            this.groupBox8.Size = new System.Drawing.Size(817, 68);
             this.groupBox8.TabIndex = 16;
             this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Fan_5 Speed Control (%)";
+            this.groupBox8.Text = "Fan_6 Speed Control (%)";
             // 
             // trackBar6
             // 
@@ -708,7 +709,7 @@
             this.trackBar6.Minimum = 10;
             this.trackBar6.Name = "trackBar6";
             this.trackBar6.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.trackBar6.Size = new System.Drawing.Size(580, 45);
+            this.trackBar6.Size = new System.Drawing.Size(584, 45);
             this.trackBar6.SmallChange = 5;
             this.trackBar6.TabIndex = 4;
             this.trackBar6.TickFrequency = 5;
@@ -743,7 +744,7 @@
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(131, 22);
             this.button11.TabIndex = 2;
-            this.button11.Text = "Set Fan_5 Speed";
+            this.button11.Text = "Set Fan_6 Speed";
             this.button11.UseVisualStyleBackColor = true;
             // 
             // groupBox11
@@ -755,10 +756,10 @@
             this.groupBox11.Controls.Add(this.button17);
             this.groupBox11.Location = new System.Drawing.Point(12, 235);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(955, 68);
+            this.groupBox11.Size = new System.Drawing.Size(817, 68);
             this.groupBox11.TabIndex = 16;
             this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "Fan_1 Speed Control (%)";
+            this.groupBox11.Text = "Fan_2 Speed Control (%)";
             // 
             // trackBar9
             // 
@@ -769,7 +770,7 @@
             this.trackBar9.Minimum = 10;
             this.trackBar9.Name = "trackBar9";
             this.trackBar9.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.trackBar9.Size = new System.Drawing.Size(580, 45);
+            this.trackBar9.Size = new System.Drawing.Size(584, 45);
             this.trackBar9.SmallChange = 5;
             this.trackBar9.TabIndex = 4;
             this.trackBar9.TickFrequency = 5;
@@ -804,14 +805,14 @@
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(131, 22);
             this.button17.TabIndex = 2;
-            this.button17.Text = "Set Fan_1 Speed";
+            this.button17.Text = "Set Fan_2 Speed";
             this.button17.UseVisualStyleBackColor = true;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(979, 923);
+            this.ClientSize = new System.Drawing.Size(841, 998);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox5);
@@ -825,7 +826,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmMain";
-            this.Text = "Dell Fans Speed Controller";
+            this.Text = "Dell Fans Speed Controller (v1.0.2 2023)";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.grpMain.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
