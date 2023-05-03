@@ -568,6 +568,7 @@
             this.btnSet3.TabIndex = 2;
             this.btnSet3.Text = "Set Fan_3 Speed";
             this.btnSet3.UseVisualStyleBackColor = true;
+            this.btnSet3.Click += new System.EventHandler(this.btnSet3_Click);
             // 
             // groupBox4
             // 
@@ -631,6 +632,7 @@
             this.btnSet4.TabIndex = 2;
             this.btnSet4.Text = "Set Fan_4 Speed";
             this.btnSet4.UseVisualStyleBackColor = true;
+            this.btnSet4.Click += new System.EventHandler(this.btnSet4_Click);
             // 
             // groupBox5
             // 
@@ -694,6 +696,7 @@
             this.btnSet5.TabIndex = 2;
             this.btnSet5.Text = "Set Fan_5 Speed";
             this.btnSet5.UseVisualStyleBackColor = true;
+            this.btnSet5.Click += new System.EventHandler(this.btnSet5_Click);
             // 
             // groupBox6
             // 
@@ -757,6 +760,7 @@
             this.btnSet6.TabIndex = 2;
             this.btnSet6.Text = "Set Fan_6 Speed";
             this.btnSet6.UseVisualStyleBackColor = true;
+            this.btnSet6.Click += new System.EventHandler(this.btnSet6_Click);
             // 
             // groupBox2
             // 
@@ -820,6 +824,7 @@
             this.btnSet2.TabIndex = 2;
             this.btnSet2.Text = "Set Fan_2 Speed";
             this.btnSet2.UseVisualStyleBackColor = true;
+            this.btnSet2.Click += new System.EventHandler(this.btnSet2_Click);
             // 
             // frmMain
             // 

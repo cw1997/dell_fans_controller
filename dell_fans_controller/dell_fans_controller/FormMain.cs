@@ -214,6 +214,111 @@ namespace dell_fans_controller
             string resultSetSpeed = execute(fullExecuteSetSpeed);
         }
 
+        private void btnSet2_Click(object sender, EventArgs e)
+        {
+            string ip = txtIp.Text;
+            string user = txtUser.Text;
+            string password = txtPassword.Text;
+            string percent = nbrUpDownSpeed2.Text;
+            int percentNum = int.Parse(percent);
+
+            string formatDisableAutoMode = "-I lanplus -H {0} -U {1} -P {2} raw 0x30 0x30 0x01 0x00";
+            string parametersDisableAutoMode = string.Format(formatDisableAutoMode, ip, user, password);
+
+            string fullExecuteDisableAutoMode = ipmitoolPath + " " + parametersDisableAutoMode;
+            string resultDisableAutoMode = execute(fullExecuteDisableAutoMode);
+
+            string formatSetSpeed = "-I lanplus -H {0} -U {1} -P {2} raw 0x30 0x30 0x02 0x01 0x{3:x2}";
+            string parametersSetSpeed = string.Format(formatSetSpeed, ip, user, password, percentNum);
+
+            string fullExecuteSetSpeed = ipmitoolPath + " " + parametersSetSpeed;
+            string resultSetSpeed = execute(fullExecuteSetSpeed);
+        }
+
+        private void btnSet3_Click(object sender, EventArgs e)
+        {
+            string ip = txtIp.Text;
+            string user = txtUser.Text;
+            string password = txtPassword.Text;
+            string percent = nbrUpDownSpeed3.Text;
+            int percentNum = int.Parse(percent);
+
+            string formatDisableAutoMode = "-I lanplus -H {0} -U {1} -P {2} raw 0x30 0x30 0x01 0x00";
+            string parametersDisableAutoMode = string.Format(formatDisableAutoMode, ip, user, password);
+
+            string fullExecuteDisableAutoMode = ipmitoolPath + " " + parametersDisableAutoMode;
+            string resultDisableAutoMode = execute(fullExecuteDisableAutoMode);
+
+            string formatSetSpeed = "-I lanplus -H {0} -U {1} -P {2} raw 0x30 0x30 0x02 0x02 0x{3:x2}";
+            string parametersSetSpeed = string.Format(formatSetSpeed, ip, user, password, percentNum);
+
+            string fullExecuteSetSpeed = ipmitoolPath + " " + parametersSetSpeed;
+            string resultSetSpeed = execute(fullExecuteSetSpeed);
+        }
+
+        private void btnSet4_Click(object sender, EventArgs e)
+        {
+            string ip = txtIp.Text;
+            string user = txtUser.Text;
+            string password = txtPassword.Text;
+            string percent = nbrUpDownSpeed4.Text;
+            int percentNum = int.Parse(percent);
+
+            string formatDisableAutoMode = "-I lanplus -H {0} -U {1} -P {2} raw 0x30 0x30 0x01 0x00";
+            string parametersDisableAutoMode = string.Format(formatDisableAutoMode, ip, user, password);
+
+            string fullExecuteDisableAutoMode = ipmitoolPath + " " + parametersDisableAutoMode;
+            string resultDisableAutoMode = execute(fullExecuteDisableAutoMode);
+
+            string formatSetSpeed = "-I lanplus -H {0} -U {1} -P {2} raw 0x30 0x30 0x02 0x03 0x{3:x2}";
+            string parametersSetSpeed = string.Format(formatSetSpeed, ip, user, password, percentNum);
+
+            string fullExecuteSetSpeed = ipmitoolPath + " " + parametersSetSpeed;
+            string resultSetSpeed = execute(fullExecuteSetSpeed);
+        }
+
+        private void btnSet5_Click(object sender, EventArgs e)
+        {
+            string ip = txtIp.Text;
+            string user = txtUser.Text;
+            string password = txtPassword.Text;
+            string percent = nbrUpDownSpeed5.Text;
+            int percentNum = int.Parse(percent);
+
+            string formatDisableAutoMode = "-I lanplus -H {0} -U {1} -P {2} raw 0x30 0x30 0x01 0x00";
+            string parametersDisableAutoMode = string.Format(formatDisableAutoMode, ip, user, password);
+
+            string fullExecuteDisableAutoMode = ipmitoolPath + " " + parametersDisableAutoMode;
+            string resultDisableAutoMode = execute(fullExecuteDisableAutoMode);
+
+            string formatSetSpeed = "-I lanplus -H {0} -U {1} -P {2} raw 0x30 0x30 0x02 0x04 0x{3:x2}";
+            string parametersSetSpeed = string.Format(formatSetSpeed, ip, user, password, percentNum);
+
+            string fullExecuteSetSpeed = ipmitoolPath + " " + parametersSetSpeed;
+            string resultSetSpeed = execute(fullExecuteSetSpeed);
+        }
+
+        private void btnSet6_Click(object sender, EventArgs e)
+        {
+            string ip = txtIp.Text;
+            string user = txtUser.Text;
+            string password = txtPassword.Text;
+            string percent = nbrUpDownSpeed6.Text;
+            int percentNum = int.Parse(percent);
+
+            string formatDisableAutoMode = "-I lanplus -H {0} -U {1} -P {2} raw 0x30 0x30 0x01 0x00";
+            string parametersDisableAutoMode = string.Format(formatDisableAutoMode, ip, user, password);
+
+            string fullExecuteDisableAutoMode = ipmitoolPath + " " + parametersDisableAutoMode;
+            string resultDisableAutoMode = execute(fullExecuteDisableAutoMode);
+
+            string formatSetSpeed = "-I lanplus -H {0} -U {1} -P {2} raw 0x30 0x30 0x02 0x05 0x{3:x2}";
+            string parametersSetSpeed = string.Format(formatSetSpeed, ip, user, password, percentNum);
+
+            string fullExecuteSetSpeed = ipmitoolPath + " " + parametersSetSpeed;
+            string resultSetSpeed = execute(fullExecuteSetSpeed);
+        }
+
         private void btnVisitDellService_Click(object sender, EventArgs e)
         {
             Process.Start(explorer, "http://" + txtIp.Text);
