@@ -407,7 +407,7 @@
             this.groupBox0.Size = new System.Drawing.Size(817, 68);
             this.groupBox0.TabIndex = 14;
             this.groupBox0.TabStop = false;
-            this.groupBox0.Text = "Fans Speed Control (%)";
+            this.groupBox0.Text = "All Fans Speed Control (%)";
             // 
             // groupBox7
             // 
@@ -503,6 +503,7 @@
             this.btnSet1.TabIndex = 2;
             this.btnSet1.Text = "Set Fan_1 Speed";
             this.btnSet1.UseVisualStyleBackColor = true;
+            this.btnSet1.Click += new System.EventHandler(this.btnSet1_Click);
             // 
             // groupBox3
             // 

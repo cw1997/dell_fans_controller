@@ -155,6 +155,19 @@ namespace dell_fans_controller
             string percent = nbrUpDownSpeed.Text;
             int percentNum = int.Parse(percent);
 
+            trkBarSpeed1.Value = percentNum;
+            trkBarSpeed2.Value = percentNum;
+            trkBarSpeed3.Value = percentNum;
+            trkBarSpeed4.Value = percentNum;
+            trkBarSpeed5.Value = percentNum;
+            trkBarSpeed6.Value = percentNum;
+            nbrUpDownSpeed1.Value = percentNum;
+            nbrUpDownSpeed2.Value = percentNum;
+            nbrUpDownSpeed3.Value = percentNum;
+            nbrUpDownSpeed4.Value = percentNum;
+            nbrUpDownSpeed5.Value = percentNum;
+            nbrUpDownSpeed6.Value = percentNum;
+
             // string format = "%s/Dell/SysMgt/bmc/ipmitool.exe -I lanplus -H %s -U %s -P %s raw
             // 0x30 0x30 0x01";
             string formatDisableAutoMode = "-I lanplus -H {0} -U {1} -P {2} raw 0x30 0x30 0x01 0x00";
@@ -178,6 +191,27 @@ namespace dell_fans_controller
             //ipmitoolPath, parametersSetSpeed);
 
             //Process.Start("cmd", cmdParameters);
+        }
+
+        private void btnSet1_Click(object sender, EventArgs e)
+        {
+            string ip = txtIp.Text;
+            string user = txtUser.Text;
+            string password = txtPassword.Text;
+            string percent = nbrUpDownSpeed1.Text;
+            int percentNum = int.Parse(percent);
+
+            string formatDisableAutoMode = "-I lanplus -H {0} -U {1} -P {2} raw 0x30 0x30 0x01 0x00";
+            string parametersDisableAutoMode = string.Format(formatDisableAutoMode, ip, user, password);
+
+            string fullExecuteDisableAutoMode = ipmitoolPath + " " + parametersDisableAutoMode;
+            string resultDisableAutoMode = execute(fullExecuteDisableAutoMode);
+
+            string formatSetSpeed = "-I lanplus -H {0} -U {1} -P {2} raw 0x30 0x30 0x02 0x00 0x{3:x2}";
+            string parametersSetSpeed = string.Format(formatSetSpeed, ip, user, password, percentNum);
+
+            string fullExecuteSetSpeed = ipmitoolPath + " " + parametersSetSpeed;
+            string resultSetSpeed = execute(fullExecuteSetSpeed);
         }
 
         private void btnVisitDellService_Click(object sender, EventArgs e)
