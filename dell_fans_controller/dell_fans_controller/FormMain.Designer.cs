@@ -841,6 +841,7 @@
             this.mode1.TabIndex = 17;
             this.mode1.Text = "Silent Mode";
             this.mode1.UseVisualStyleBackColor = true;
+            this.mode1.Click += new System.EventHandler(this.mode1_Click);
             // 
             // mode2
             // 
@@ -850,6 +851,7 @@
             this.mode2.TabIndex = 17;
             this.mode2.Text = "One Node Mode (L)";
             this.mode2.UseVisualStyleBackColor = true;
+            this.mode2.Click += new System.EventHandler(this.mode2_Click);
             // 
             // mode3
             // 
@@ -859,6 +861,7 @@
             this.mode3.TabIndex = 17;
             this.mode3.Text = "One Node Mode (R)";
             this.mode3.UseVisualStyleBackColor = true;
+            this.mode3.Click += new System.EventHandler(this.mode3_Click);
             // 
             // mode4
             // 
@@ -868,6 +871,7 @@
             this.mode4.TabIndex = 17;
             this.mode4.Text = "Two Node Mode (ECO)";
             this.mode4.UseVisualStyleBackColor = true;
+            this.mode4.Click += new System.EventHandler(this.mode4_Click);
             // 
             // mode5
             // 
@@ -875,8 +879,9 @@
             this.mode5.Name = "mode5";
             this.mode5.Size = new System.Drawing.Size(145, 22);
             this.mode5.TabIndex = 17;
-            this.mode5.Text = "Two Node Mode (165W)";
+            this.mode5.Text = "Two Node Mode (125W)";
             this.mode5.UseVisualStyleBackColor = true;
+            this.mode5.Click += new System.EventHandler(this.mode5_Click);
             // 
             // frmMain
             // 

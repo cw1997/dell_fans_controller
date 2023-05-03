@@ -461,5 +461,115 @@ namespace dell_fans_controller
         {
             MessageBox.Show("Version: 1.0.2 (2023)\n\nCode by zzccchen, fork from cw1997 and jiafeng5513\n\nSouce code: https://github.com/zzccchen/dell_fans_controller");
         }
+
+        private void mode1_Click(object sender, EventArgs e)
+        {
+            trkBarSpeed1.Value = 15;
+            trkBarSpeed2.Value = 15;
+            trkBarSpeed3.Value = 15;
+            trkBarSpeed4.Value = 15;
+            trkBarSpeed5.Value = 15;
+            trkBarSpeed6.Value = 15;
+            nbrUpDownSpeed1.Value = 15;
+            nbrUpDownSpeed2.Value = 15;
+            nbrUpDownSpeed3.Value = 15;
+            nbrUpDownSpeed4.Value = 15;
+            nbrUpDownSpeed5.Value = 15;
+            nbrUpDownSpeed6.Value = 15;
+            btnSet1_Click(this, EventArgs.Empty);
+            btnSet2_Click(this, EventArgs.Empty);
+            btnSet3_Click(this, EventArgs.Empty);
+            btnSet4_Click(this, EventArgs.Empty);
+            btnSet5_Click(this, EventArgs.Empty);
+            btnSet6_Click(this, EventArgs.Empty);
+        }
+
+        private void mode5_Click(object sender, EventArgs e)
+        {
+            trkBarSpeed1.Value = 25;
+            trkBarSpeed2.Value = 40;
+            trkBarSpeed3.Value = 30;
+            trkBarSpeed4.Value = 30;
+            trkBarSpeed5.Value = 40;
+            trkBarSpeed6.Value = 25;
+            nbrUpDownSpeed1.Value = 25;
+            nbrUpDownSpeed2.Value = 40;
+            nbrUpDownSpeed3.Value = 30;
+            nbrUpDownSpeed4.Value = 30;
+            nbrUpDownSpeed5.Value = 40;
+            nbrUpDownSpeed6.Value = 25;
+            btnSet1_Click(this, EventArgs.Empty);
+            btnSet2_Click(this, EventArgs.Empty);
+            btnSet3_Click(this, EventArgs.Empty);
+            btnSet4_Click(this, EventArgs.Empty);
+            btnSet5_Click(this, EventArgs.Empty);
+            btnSet6_Click(this, EventArgs.Empty);
+        }
+
+        private void mode2_Click(object sender, EventArgs e)
+        {
+            trkBarSpeed1.Value = 25;
+            trkBarSpeed2.Value = 40;
+            trkBarSpeed3.Value = 30;
+            trkBarSpeed4.Value = 25;
+            trkBarSpeed5.Value = 20;
+            trkBarSpeed6.Value = 20;
+            nbrUpDownSpeed1.Value = 25;
+            nbrUpDownSpeed2.Value = 40;
+            nbrUpDownSpeed3.Value = 30;
+            nbrUpDownSpeed4.Value = 25;
+            nbrUpDownSpeed5.Value = 20;
+            nbrUpDownSpeed6.Value = 20;
+            btnSet1_Click(this, EventArgs.Empty);
+            btnSet2_Click(this, EventArgs.Empty);
+            btnSet3_Click(this, EventArgs.Empty);
+            btnSet4_Click(this, EventArgs.Empty);
+            btnSet5_Click(this, EventArgs.Empty);
+            btnSet6_Click(this, EventArgs.Empty);
+        }
+
+        private void mode3_Click(object sender, EventArgs e)
+        {
+            trkBarSpeed1.Value = 20;
+            trkBarSpeed2.Value = 20;
+            trkBarSpeed3.Value = 25;
+            trkBarSpeed4.Value = 30;
+            trkBarSpeed5.Value = 40;
+            trkBarSpeed6.Value = 25;
+            nbrUpDownSpeed1.Value = 20;
+            nbrUpDownSpeed2.Value = 20;
+            nbrUpDownSpeed3.Value = 25;
+            nbrUpDownSpeed4.Value = 30;
+            nbrUpDownSpeed5.Value = 40;
+            nbrUpDownSpeed6.Value = 25;
+            btnSet1_Click(this, EventArgs.Empty);
+            btnSet2_Click(this, EventArgs.Empty);
+            btnSet3_Click(this, EventArgs.Empty);
+            btnSet4_Click(this, EventArgs.Empty);
+            btnSet5_Click(this, EventArgs.Empty);
+            btnSet6_Click(this, EventArgs.Empty);
+        }
+
+        private void mode4_Click(object sender, EventArgs e)
+        {
+            trkBarSpeed1.Value = 15;
+            trkBarSpeed2.Value = 23;
+            trkBarSpeed3.Value = 20;
+            trkBarSpeed4.Value = 20;
+            trkBarSpeed5.Value = 23;
+            trkBarSpeed6.Value = 15;
+            nbrUpDownSpeed1.Value = 15;
+            nbrUpDownSpeed2.Value = 23;
+            nbrUpDownSpeed3.Value = 20;
+            nbrUpDownSpeed4.Value = 20;
+            nbrUpDownSpeed5.Value = 23;
+            nbrUpDownSpeed6.Value = 15;
+            btnSet1_Click(this, EventArgs.Empty);
+            btnSet2_Click(this, EventArgs.Empty);
+            btnSet3_Click(this, EventArgs.Empty);
+            btnSet4_Click(this, EventArgs.Empty);
+            btnSet5_Click(this, EventArgs.Empty);
+            btnSet6_Click(this, EventArgs.Empty);
+        }
     }
 }
