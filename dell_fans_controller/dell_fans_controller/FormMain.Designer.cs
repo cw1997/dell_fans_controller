@@ -469,6 +469,7 @@
             this.trkBarSpeed1.TabIndex = 4;
             this.trkBarSpeed1.TickFrequency = 5;
             this.trkBarSpeed1.Value = 20;
+            this.trkBarSpeed1.Scroll += new System.EventHandler(this.trkBarSpeed1_Scroll);
             // 
             // nbrUpDownSpeed1
             // 
@@ -492,6 +493,7 @@
             0,
             0,
             0});
+            this.nbrUpDownSpeed1.ValueChanged += new System.EventHandler(this.nbrUpDownSpeed1_ValueChanged);
             // 
             // btnSet1
             // 
@@ -530,6 +532,7 @@
             this.trkBarSpeed3.TabIndex = 4;
             this.trkBarSpeed3.TickFrequency = 5;
             this.trkBarSpeed3.Value = 20;
+            this.trkBarSpeed3.Scroll += new System.EventHandler(this.trkBarSpeed3_Scroll);
             // 
             // nbrUpDownSpeed3
             // 
@@ -554,6 +557,7 @@
             0,
             0,
             0});
+            this.nbrUpDownSpeed3.ValueChanged += new System.EventHandler(this.nbrUpDownSpeed3_ValueChanged);
             // 
             // btnSet3
             // 
@@ -592,6 +596,7 @@
             this.trkBarSpeed4.TabIndex = 4;
             this.trkBarSpeed4.TickFrequency = 5;
             this.trkBarSpeed4.Value = 20;
+            this.trkBarSpeed4.Scroll += new System.EventHandler(this.trkBarSpeed4_Scroll);
             // 
             // nbrUpDownSpeed4
             // 
@@ -615,6 +620,7 @@
             0,
             0,
             0});
+            this.nbrUpDownSpeed4.ValueChanged += new System.EventHandler(this.nbrUpDownSpeed4_ValueChanged);
             // 
             // btnSet4
             // 
@@ -653,6 +659,7 @@
             this.trkBarSpeed5.TabIndex = 4;
             this.trkBarSpeed5.TickFrequency = 5;
             this.trkBarSpeed5.Value = 20;
+            this.trkBarSpeed5.Scroll += new System.EventHandler(this.trkBarSpeed5_Scroll);
             // 
             // nbrUpDownSpeed5
             // 
@@ -676,6 +683,7 @@
             0,
             0,
             0});
+            this.nbrUpDownSpeed5.ValueChanged += new System.EventHandler(this.nbrUpDownSpeed5_ValueChanged);
             // 
             // btnSet5
             // 
@@ -714,6 +722,7 @@
             this.trkBarSpeed6.TabIndex = 4;
             this.trkBarSpeed6.TickFrequency = 5;
             this.trkBarSpeed6.Value = 20;
+            this.trkBarSpeed6.Scroll += new System.EventHandler(this.trkBarSpeed6_Scroll);
             // 
             // nbrUpDownSpeed6
             // 
@@ -737,6 +746,7 @@
             0,
             0,
             0});
+            this.nbrUpDownSpeed6.ValueChanged += new System.EventHandler(this.nbrUpDownSpeed6_ValueChanged);
             // 
             // btnSet6
             // 
@@ -775,6 +785,7 @@
             this.trkBarSpeed2.TabIndex = 4;
             this.trkBarSpeed2.TickFrequency = 5;
             this.trkBarSpeed2.Value = 20;
+            this.trkBarSpeed2.Scroll += new System.EventHandler(this.trkBarSpeed2_Scroll);
             // 
             // nbrUpDownSpeed2
             // 
@@ -798,6 +809,7 @@
             0,
             0,
             0});
+            this.nbrUpDownSpeed2.ValueChanged += new System.EventHandler(this.nbrUpDownSpeed2_ValueChanged);
             // 
             // btnSet2
             // 

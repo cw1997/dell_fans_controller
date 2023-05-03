@@ -104,6 +104,36 @@ namespace dell_fans_controller
             nbrUpDownSpeed6.Value = (int)nbrUpDownSpeed.Value;
         }
 
+        private void nbrUpDownSpeed1_ValueChanged(object sender, EventArgs e)
+        {
+            trkBarSpeed1.Value = (int)nbrUpDownSpeed1.Value;
+        }
+
+        private void nbrUpDownSpeed2_ValueChanged(object sender, EventArgs e)
+        {
+            trkBarSpeed2.Value = (int)nbrUpDownSpeed2.Value;
+        }
+
+        private void nbrUpDownSpeed3_ValueChanged(object sender, EventArgs e)
+        {
+            trkBarSpeed3.Value = (int)nbrUpDownSpeed3.Value;
+        }
+
+        private void nbrUpDownSpeed4_ValueChanged(object sender, EventArgs e)
+        {
+            trkBarSpeed4.Value = (int)nbrUpDownSpeed4.Value;
+        }
+
+        private void nbrUpDownSpeed5_ValueChanged(object sender, EventArgs e)
+        {
+            trkBarSpeed5.Value = (int)nbrUpDownSpeed5.Value;
+        }
+
+        private void nbrUpDownSpeed6_ValueChanged(object sender, EventArgs e)
+        {
+            trkBarSpeed6.Value = (int)nbrUpDownSpeed6.Value;
+        }
+
         private void btnReset_Click(object sender, EventArgs e)
         {
             string ip = txtIp.Text;
@@ -170,6 +200,36 @@ namespace dell_fans_controller
             nbrUpDownSpeed4.Value = trkBarSpeed.Value;
             nbrUpDownSpeed5.Value = trkBarSpeed.Value;
             nbrUpDownSpeed6.Value = trkBarSpeed.Value;
+        }
+
+        private void trkBarSpeed1_Scroll(object sender, EventArgs e)
+        {
+            nbrUpDownSpeed1.Value = trkBarSpeed1.Value;
+        }
+
+        private void trkBarSpeed2_Scroll(object sender, EventArgs e)
+        {
+            nbrUpDownSpeed2.Value = trkBarSpeed2.Value;
+        }
+
+        private void trkBarSpeed3_Scroll(object sender, EventArgs e)
+        {
+            nbrUpDownSpeed3.Value = trkBarSpeed3.Value;
+        }
+
+        private void trkBarSpeed4_Scroll(object sender, EventArgs e)
+        {
+            nbrUpDownSpeed4.Value = trkBarSpeed4.Value;
+        }
+
+        private void trkBarSpeed5_Scroll(object sender, EventArgs e)
+        {
+            nbrUpDownSpeed5.Value = trkBarSpeed5.Value;
+        }
+
+        private void trkBarSpeed6_Scroll(object sender, EventArgs e)
+        {
+            nbrUpDownSpeed6.Value = trkBarSpeed6.Value;
         }
 
         private void btnRefreshNow_Click(object sender, EventArgs e)
