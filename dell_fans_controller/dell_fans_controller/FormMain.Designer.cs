@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.grpMain = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.about_button = new System.Windows.Forms.Button();
             this.lblIp = new System.Windows.Forms.Label();
             this.btnVisitDellService = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
@@ -57,9 +58,8 @@
             this.btnRefreshNow = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.background_FetchStates = new System.ComponentModel.BackgroundWorker();
             this.progressBar = new System.Windows.Forms.ProgressBar();
-            this.about_button = new System.Windows.Forms.Button();
+            this.background_FetchStates = new System.ComponentModel.BackgroundWorker();
             this.grpMain.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trkBarSpeed)).BeginInit();
@@ -91,7 +91,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 202F));
             this.tableLayoutPanel1.Controls.Add(this.about_button, 7, 0);
             this.tableLayoutPanel1.Controls.Add(this.lblIp, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnVisitDellService, 6, 0);
@@ -107,6 +107,16 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(856, 43);
             this.tableLayoutPanel1.TabIndex = 12;
+            // 
+            // about_button
+            // 
+            this.about_button.Location = new System.Drawing.Point(657, 3);
+            this.about_button.Name = "about_button";
+            this.about_button.Size = new System.Drawing.Size(91, 27);
+            this.about_button.TabIndex = 13;
+            this.about_button.Text = "About";
+            this.about_button.UseVisualStyleBackColor = true;
+            this.about_button.Click += new System.EventHandler(this.about_button_Click);
             // 
             // lblIp
             // 
@@ -354,12 +364,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "States";
             // 
-            // background_FetchStates
-            // 
-            this.background_FetchStates.WorkerReportsProgress = true;
-            this.background_FetchStates.DoWork += new System.ComponentModel.DoWorkEventHandler(this.background_FetchStates_DoWork);
-            this.background_FetchStates.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.background_FetchStates_ProgressChanged);
-            // 
             // progressBar
             // 
             this.progressBar.Location = new System.Drawing.Point(542, 17);
@@ -368,15 +372,11 @@
             this.progressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.progressBar.TabIndex = 24;
             // 
-            // about_button
+            // background_FetchStates
             // 
-            this.about_button.Location = new System.Drawing.Point(657, 3);
-            this.about_button.Name = "about_button";
-            this.about_button.Size = new System.Drawing.Size(91, 27);
-            this.about_button.TabIndex = 13;
-            this.about_button.Text = "About";
-            this.about_button.UseVisualStyleBackColor = true;
-            this.about_button.Click += new System.EventHandler(this.about_button_Click);
+            this.background_FetchStates.WorkerReportsProgress = true;
+            this.background_FetchStates.DoWork += new System.ComponentModel.DoWorkEventHandler(this.background_FetchStates_DoWork);
+            this.background_FetchStates.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.background_FetchStates_ProgressChanged);
             // 
             // frmMain
             // 

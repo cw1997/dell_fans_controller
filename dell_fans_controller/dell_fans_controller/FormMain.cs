@@ -1,19 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
 using System.IO;
-using System.Text;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace dell_fans_controller
 {
     public partial class frmMain : Form
     {
-        private static string version = "v1.0.1";
+        private static string version = "v1.0.2";
 
         private static string currentPath = Application.StartupPath; // System.Environment.CurrentDirectory;
         private static string configFileName = "\\config.ini";
@@ -21,7 +16,7 @@ namespace dell_fans_controller
         private static string ipmitoolPath = currentPath + "\\ipmitool.exe";
         private static string configFilePath = currentPath + configFileName;
 
-        private static string defaultIp = "127.0.0.1";
+        private static string defaultIp = "192.168.1.100";
         private static string defaultUser = "root";
         private static string defaultPassword = "calvin";
         private static string defaultConfigSection = "ipmi";
@@ -34,16 +29,16 @@ namespace dell_fans_controller
             {
                 process = new Process();
                 process.StartInfo.FileName = "cmd.exe";
-                process.StartInfo.UseShellExecute = false;
-                process.StartInfo.CreateNoWindow = true;
-                process.StartInfo.RedirectStandardInput = true;
-                process.StartInfo.RedirectStandardOutput = true;
-                process.StartInfo.RedirectStandardError = true;
+                process.StartInfo.UseShellExecute = false;
+                process.StartInfo.CreateNoWindow = true;
+                process.StartInfo.RedirectStandardInput = true;
+                process.StartInfo.RedirectStandardOutput = true;
+                process.StartInfo.RedirectStandardError = true;
 
                 process.Start();
 
                 process.StandardInput.WriteLine(parameter + "& exit");
-                process.StandardInput.AutoFlush = true;
+                process.StandardInput.AutoFlush = true;
                 result = process.StandardOutput.ReadToEnd();
                 process.WaitForExit();
                 process.Close();
@@ -51,7 +46,7 @@ namespace dell_fans_controller
             }
             catch (Exception ex)
             {
-                Console.WriteLine("ExceptionOccurred:{ 0},{ 1}", ex.Message, ex.StackTrace.ToString());
+                Console.WriteLine("ExceptionOccurred:{ 0},{ 1}", ex.Message, ex.StackTrace.ToString());
                 return null;
             }
         }
@@ -70,7 +65,6 @@ namespace dell_fans_controller
         public frmMain()
         {
             InitializeComponent();
-
 
             if (File.Exists(configFilePath))
             {
@@ -119,15 +113,16 @@ namespace dell_fans_controller
             string percent = nbrUpDownSpeed.Text;
             int percentNum = int.Parse(percent);
 
-            // string format = "%s/Dell/SysMgt/bmc/ipmitool.exe -I lanplus -H %s -U %s -P %s raw 0x30 0x30 0x01";
+            // string format = "%s/Dell/SysMgt/bmc/ipmitool.exe -I lanplus -H %s -U %s -P %s raw
+            // 0x30 0x30 0x01";
             string formatDisableAutoMode = "-I lanplus -H {0} -U {1} -P {2} raw 0x30 0x30 0x01 0x00";
             string parametersDisableAutoMode = string.Format(formatDisableAutoMode, ip, user, password);
 
             string fullExecuteDisableAutoMode = ipmitoolPath + " " + parametersDisableAutoMode;
             string resultDisableAutoMode = execute(fullExecuteDisableAutoMode);
 
-
-            // format = "%s/Dell/SysMgt/bmc/ipmitool.exe -I lanplus -H %s -U %s -P %s raw 0x30 0x30 0x02 0xff 0x%02x";
+            // format = "%s/Dell/SysMgt/bmc/ipmitool.exe -I lanplus -H %s -U %s -P %s raw 0x30 0x30
+            // 0x02 0xff 0x%02x";
             string formatSetSpeed = "-I lanplus -H {0} -U {1} -P {2} raw 0x30 0x30 0x02 0xff 0x{3:x2}";
             string parametersSetSpeed = string.Format(formatSetSpeed, ip, user, password, percentNum);
 
@@ -137,10 +132,10 @@ namespace dell_fans_controller
             // MessageBox.Show(resultDisableAutoMode + "-" + resultSetSpeed);
 
             //string cmdFormat = "/k \"{0} {1}\" & \"{2} {3}\"";
-            //string cmdParameters = string.Format(cmdFormat, ipmitoolPath, parametersDisableAutoMode, ipmitoolPath, parametersSetSpeed);
+            //string cmdParameters = string.Format(cmdFormat, ipmitoolPath, parametersDisableAutoMode,
+            //ipmitoolPath, parametersSetSpeed);
 
             //Process.Start("cmd", cmdParameters);
-
         }
 
         private void btnVisitDellService_Click(object sender, EventArgs e)
@@ -152,7 +147,6 @@ namespace dell_fans_controller
         {
             nbrUpDownSpeed.Value = trkBarSpeed.Value;
         }
-
 
         private void btnRefreshNow_Click(object sender, EventArgs e)
         {
@@ -176,7 +170,6 @@ namespace dell_fans_controller
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-
             this.Text += " " + version;
         }
 
@@ -224,7 +217,7 @@ namespace dell_fans_controller
         private void background_FetchStates_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             int Percentage = e.ProgressPercentage;
-            if (Percentage == 0) 
+            if (Percentage == 0)
             {
                 this.progressBar.Visible = true;
                 lstViewSensor.Items.Clear();
@@ -239,7 +232,6 @@ namespace dell_fans_controller
             {
                 this.progressBar.Visible = false;
             }
-
         }
 
         private void about_button_Click(object sender, EventArgs e)
