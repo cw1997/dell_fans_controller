@@ -90,6 +90,18 @@ namespace dell_fans_controller
         private void nbrUpDownSpeed_ValueChanged(object sender, EventArgs e)
         {
             trkBarSpeed.Value = (int)nbrUpDownSpeed.Value;
+            trkBarSpeed1.Value = (int)nbrUpDownSpeed.Value;
+            trkBarSpeed2.Value = (int)nbrUpDownSpeed.Value;
+            trkBarSpeed3.Value = (int)nbrUpDownSpeed.Value;
+            trkBarSpeed4.Value = (int)nbrUpDownSpeed.Value;
+            trkBarSpeed5.Value = (int)nbrUpDownSpeed.Value;
+            trkBarSpeed6.Value = (int)nbrUpDownSpeed.Value;
+            nbrUpDownSpeed1.Value = (int)nbrUpDownSpeed.Value;
+            nbrUpDownSpeed2.Value = (int)nbrUpDownSpeed.Value;
+            nbrUpDownSpeed3.Value = (int)nbrUpDownSpeed.Value;
+            nbrUpDownSpeed4.Value = (int)nbrUpDownSpeed.Value;
+            nbrUpDownSpeed5.Value = (int)nbrUpDownSpeed.Value;
+            nbrUpDownSpeed6.Value = (int)nbrUpDownSpeed.Value;
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -146,6 +158,18 @@ namespace dell_fans_controller
         private void trkBarSpeed_Scroll(object sender, EventArgs e)
         {
             nbrUpDownSpeed.Value = trkBarSpeed.Value;
+            trkBarSpeed1.Value = trkBarSpeed.Value;
+            trkBarSpeed2.Value = trkBarSpeed.Value;
+            trkBarSpeed3.Value = trkBarSpeed.Value;
+            trkBarSpeed4.Value = trkBarSpeed.Value;
+            trkBarSpeed5.Value = trkBarSpeed.Value;
+            trkBarSpeed6.Value = trkBarSpeed.Value;
+            nbrUpDownSpeed1.Value = trkBarSpeed.Value;
+            nbrUpDownSpeed2.Value = trkBarSpeed.Value;
+            nbrUpDownSpeed3.Value = trkBarSpeed.Value;
+            nbrUpDownSpeed4.Value = trkBarSpeed.Value;
+            nbrUpDownSpeed5.Value = trkBarSpeed.Value;
+            nbrUpDownSpeed6.Value = trkBarSpeed.Value;
         }
 
         private void btnRefreshNow_Click(object sender, EventArgs e)
