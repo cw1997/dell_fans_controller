@@ -32,13 +32,13 @@
             this.grpMain = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.about_button = new System.Windows.Forms.Button();
-            this.lblIp = new System.Windows.Forms.Label();
             this.btnVisitDellService = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.txtIp = new System.Windows.Forms.TextBox();
             this.lblUser = new System.Windows.Forms.Label();
             this.txtUser = new System.Windows.Forms.TextBox();
+            this.lblIp = new System.Windows.Forms.Label();
             this.trkBarSpeed = new System.Windows.Forms.TrackBar();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnSet = new System.Windows.Forms.Button();
@@ -60,6 +60,36 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.background_FetchStates = new System.ComponentModel.BackgroundWorker();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.trackBar2 = new System.Windows.Forms.TrackBar();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.trackBar3 = new System.Windows.Forms.TrackBar();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.trackBar5 = new System.Windows.Forms.TrackBar();
+            this.numericUpDown5 = new System.Windows.Forms.NumericUpDown();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.trackBar6 = new System.Windows.Forms.TrackBar();
+            this.numericUpDown6 = new System.Windows.Forms.NumericUpDown();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.trackBar9 = new System.Windows.Forms.TrackBar();
+            this.numericUpDown9 = new System.Windows.Forms.NumericUpDown();
+            this.button17 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
             this.grpMain.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trkBarSpeed)).BeginInit();
@@ -67,6 +97,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.nbrUpDownAutoRefresh)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
+            this.groupBox8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
+            this.groupBox11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).BeginInit();
             this.SuspendLayout();
             // 
             // grpMain
@@ -76,7 +124,7 @@
             this.grpMain.Controls.Add(this.tableLayoutPanel1);
             this.grpMain.Location = new System.Drawing.Point(12, 12);
             this.grpMain.Name = "grpMain";
-            this.grpMain.Size = new System.Drawing.Size(959, 63);
+            this.grpMain.Size = new System.Drawing.Size(955, 63);
             this.grpMain.TabIndex = 1;
             this.grpMain.TabStop = false;
             this.grpMain.Text = "iDRAC";
@@ -91,7 +139,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 202F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 299F));
             this.tableLayoutPanel1.Controls.Add(this.about_button, 7, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnVisitDellService, 6, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtPassword, 5, 0);
@@ -105,7 +153,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(953, 43);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(949, 43);
             this.tableLayoutPanel1.TabIndex = 12;
             // 
             // about_button
@@ -117,15 +165,6 @@
             this.about_button.Text = "About";
             this.about_button.UseVisualStyleBackColor = true;
             this.about_button.Click += new System.EventHandler(this.about_button_Click);
-            // 
-            // lblIp
-            // 
-            this.lblIp.AutoSize = true;
-            this.lblIp.Location = new System.Drawing.Point(3, 0);
-            this.lblIp.Name = "lblIp";
-            this.lblIp.Size = new System.Drawing.Size(17, 12);
-            this.lblIp.TabIndex = 6;
-            this.lblIp.Text = "IP";
             // 
             // btnVisitDellService
             // 
@@ -183,6 +222,15 @@
             this.txtUser.Text = "root";
             this.txtUser.LostFocus += new System.EventHandler(this.TxtUser_LostFocus);
             // 
+            // lblIp
+            // 
+            this.lblIp.AutoSize = true;
+            this.lblIp.Location = new System.Drawing.Point(3, 0);
+            this.lblIp.Name = "lblIp";
+            this.lblIp.Size = new System.Drawing.Size(17, 12);
+            this.lblIp.TabIndex = 6;
+            this.lblIp.Text = "IP";
+            // 
             // trkBarSpeed
             // 
             this.trkBarSpeed.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -192,7 +240,7 @@
             this.trkBarSpeed.Minimum = 10;
             this.trkBarSpeed.Name = "trkBarSpeed";
             this.trkBarSpeed.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.trkBarSpeed.Size = new System.Drawing.Size(584, 45);
+            this.trkBarSpeed.Size = new System.Drawing.Size(580, 45);
             this.trkBarSpeed.SmallChange = 5;
             this.trkBarSpeed.TabIndex = 4;
             this.trkBarSpeed.TickFrequency = 5;
@@ -262,7 +310,7 @@
             this.lstViewSensor.HideSelection = false;
             this.lstViewSensor.Location = new System.Drawing.Point(6, 42);
             this.lstViewSensor.Name = "lstViewSensor";
-            this.lstViewSensor.Size = new System.Drawing.Size(945, 229);
+            this.lstViewSensor.Size = new System.Drawing.Size(941, 251);
             this.lstViewSensor.TabIndex = 7;
             this.lstViewSensor.UseCompatibleStateImageBehavior = false;
             this.lstViewSensor.View = System.Windows.Forms.View.Details;
@@ -361,7 +409,7 @@
             this.groupBox1.Controls.Add(this.btnReset);
             this.groupBox1.Location = new System.Drawing.Point(12, 81);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(959, 68);
+            this.groupBox1.Size = new System.Drawing.Size(955, 68);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Fans Speed Control";
@@ -377,9 +425,9 @@
             this.groupBox2.Controls.Add(this.nbrUpDownAutoRefresh);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.lblAutoRefresh);
-            this.groupBox2.Location = new System.Drawing.Point(13, 634);
+            this.groupBox2.Location = new System.Drawing.Point(13, 612);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(958, 277);
+            this.groupBox2.Size = new System.Drawing.Size(954, 299);
             this.groupBox2.TabIndex = 15;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "States";
@@ -398,11 +446,443 @@
             this.background_FetchStates.DoWork += new System.ComponentModel.DoWorkEventHandler(this.background_FetchStates_DoWork);
             this.background_FetchStates.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.background_FetchStates_ProgressChanged);
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.trackBar1);
+            this.groupBox3.Controls.Add(this.numericUpDown1);
+            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.button2);
+            this.groupBox3.Location = new System.Drawing.Point(12, 155);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(955, 68);
+            this.groupBox3.TabIndex = 16;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Fans Speed Control";
+            // 
+            // trackBar1
+            // 
+            this.trackBar1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackBar1.Location = new System.Drawing.Point(8, 20);
+            this.trackBar1.Maximum = 100;
+            this.trackBar1.Minimum = 10;
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.trackBar1.Size = new System.Drawing.Size(580, 45);
+            this.trackBar1.SmallChange = 5;
+            this.trackBar1.TabIndex = 4;
+            this.trackBar1.TickFrequency = 5;
+            this.trackBar1.Value = 20;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numericUpDown1.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Location = new System.Drawing.Point(599, 23);
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(55, 21);
+            this.numericUpDown1.TabIndex = 1;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(675, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(131, 22);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Set Speed";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(812, 22);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(131, 22);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Reset to Auto Mode";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox4.Controls.Add(this.trackBar2);
+            this.groupBox4.Controls.Add(this.numericUpDown2);
+            this.groupBox4.Controls.Add(this.button3);
+            this.groupBox4.Controls.Add(this.button4);
+            this.groupBox4.Location = new System.Drawing.Point(12, 303);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(955, 68);
+            this.groupBox4.TabIndex = 16;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Fans Speed Control";
+            // 
+            // trackBar2
+            // 
+            this.trackBar2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackBar2.Location = new System.Drawing.Point(8, 20);
+            this.trackBar2.Maximum = 100;
+            this.trackBar2.Minimum = 10;
+            this.trackBar2.Name = "trackBar2";
+            this.trackBar2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.trackBar2.Size = new System.Drawing.Size(580, 45);
+            this.trackBar2.SmallChange = 5;
+            this.trackBar2.TabIndex = 4;
+            this.trackBar2.TickFrequency = 5;
+            this.trackBar2.Value = 20;
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numericUpDown2.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Location = new System.Drawing.Point(599, 23);
+            this.numericUpDown2.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(55, 21);
+            this.numericUpDown2.TabIndex = 1;
+            this.numericUpDown2.Value = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(675, 22);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(131, 22);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "Set Speed";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(812, 22);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(131, 22);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Reset to Auto Mode";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox5.Controls.Add(this.trackBar3);
+            this.groupBox5.Controls.Add(this.numericUpDown3);
+            this.groupBox5.Controls.Add(this.button5);
+            this.groupBox5.Controls.Add(this.button6);
+            this.groupBox5.Location = new System.Drawing.Point(12, 378);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(955, 68);
+            this.groupBox5.TabIndex = 16;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Fans Speed Control";
+            // 
+            // trackBar3
+            // 
+            this.trackBar3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackBar3.Location = new System.Drawing.Point(8, 20);
+            this.trackBar3.Maximum = 100;
+            this.trackBar3.Minimum = 10;
+            this.trackBar3.Name = "trackBar3";
+            this.trackBar3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.trackBar3.Size = new System.Drawing.Size(580, 45);
+            this.trackBar3.SmallChange = 5;
+            this.trackBar3.TabIndex = 4;
+            this.trackBar3.TickFrequency = 5;
+            this.trackBar3.Value = 20;
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numericUpDown3.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDown3.Location = new System.Drawing.Point(599, 23);
+            this.numericUpDown3.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(55, 21);
+            this.numericUpDown3.TabIndex = 1;
+            this.numericUpDown3.Value = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(675, 22);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(131, 22);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "Set Speed";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(812, 22);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(131, 22);
+            this.button6.TabIndex = 3;
+            this.button6.Text = "Reset to Auto Mode";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox7.Controls.Add(this.trackBar5);
+            this.groupBox7.Controls.Add(this.numericUpDown5);
+            this.groupBox7.Controls.Add(this.button9);
+            this.groupBox7.Controls.Add(this.button10);
+            this.groupBox7.Location = new System.Drawing.Point(12, 452);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(955, 68);
+            this.groupBox7.TabIndex = 16;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Fans Speed Control";
+            // 
+            // trackBar5
+            // 
+            this.trackBar5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackBar5.Location = new System.Drawing.Point(8, 20);
+            this.trackBar5.Maximum = 100;
+            this.trackBar5.Minimum = 10;
+            this.trackBar5.Name = "trackBar5";
+            this.trackBar5.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.trackBar5.Size = new System.Drawing.Size(580, 45);
+            this.trackBar5.SmallChange = 5;
+            this.trackBar5.TabIndex = 4;
+            this.trackBar5.TickFrequency = 5;
+            this.trackBar5.Value = 20;
+            // 
+            // numericUpDown5
+            // 
+            this.numericUpDown5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numericUpDown5.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDown5.Location = new System.Drawing.Point(599, 23);
+            this.numericUpDown5.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDown5.Name = "numericUpDown5";
+            this.numericUpDown5.Size = new System.Drawing.Size(55, 21);
+            this.numericUpDown5.TabIndex = 1;
+            this.numericUpDown5.Value = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(675, 22);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(131, 22);
+            this.button9.TabIndex = 2;
+            this.button9.Text = "Set Speed";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(812, 22);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(131, 22);
+            this.button10.TabIndex = 3;
+            this.button10.Text = "Reset to Auto Mode";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox8.Controls.Add(this.trackBar6);
+            this.groupBox8.Controls.Add(this.numericUpDown6);
+            this.groupBox8.Controls.Add(this.button11);
+            this.groupBox8.Controls.Add(this.button12);
+            this.groupBox8.Location = new System.Drawing.Point(12, 526);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(955, 68);
+            this.groupBox8.TabIndex = 16;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Fans Speed Control";
+            // 
+            // trackBar6
+            // 
+            this.trackBar6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackBar6.Location = new System.Drawing.Point(8, 20);
+            this.trackBar6.Maximum = 100;
+            this.trackBar6.Minimum = 10;
+            this.trackBar6.Name = "trackBar6";
+            this.trackBar6.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.trackBar6.Size = new System.Drawing.Size(580, 45);
+            this.trackBar6.SmallChange = 5;
+            this.trackBar6.TabIndex = 4;
+            this.trackBar6.TickFrequency = 5;
+            this.trackBar6.Value = 20;
+            // 
+            // numericUpDown6
+            // 
+            this.numericUpDown6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numericUpDown6.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDown6.Location = new System.Drawing.Point(599, 23);
+            this.numericUpDown6.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDown6.Name = "numericUpDown6";
+            this.numericUpDown6.Size = new System.Drawing.Size(55, 21);
+            this.numericUpDown6.TabIndex = 1;
+            this.numericUpDown6.Value = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            // 
+            // button11
+            // 
+            this.button11.Location = new System.Drawing.Point(675, 22);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(131, 22);
+            this.button11.TabIndex = 2;
+            this.button11.Text = "Set Speed";
+            this.button11.UseVisualStyleBackColor = true;
+            // 
+            // button12
+            // 
+            this.button12.Location = new System.Drawing.Point(812, 22);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(131, 22);
+            this.button12.TabIndex = 3;
+            this.button12.Text = "Reset to Auto Mode";
+            this.button12.UseVisualStyleBackColor = true;
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox11.Controls.Add(this.trackBar9);
+            this.groupBox11.Controls.Add(this.numericUpDown9);
+            this.groupBox11.Controls.Add(this.button17);
+            this.groupBox11.Controls.Add(this.button18);
+            this.groupBox11.Location = new System.Drawing.Point(12, 229);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(955, 68);
+            this.groupBox11.TabIndex = 16;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Fans Speed Control";
+            // 
+            // trackBar9
+            // 
+            this.trackBar9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.trackBar9.Location = new System.Drawing.Point(8, 20);
+            this.trackBar9.Maximum = 100;
+            this.trackBar9.Minimum = 10;
+            this.trackBar9.Name = "trackBar9";
+            this.trackBar9.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.trackBar9.Size = new System.Drawing.Size(580, 45);
+            this.trackBar9.SmallChange = 5;
+            this.trackBar9.TabIndex = 4;
+            this.trackBar9.TickFrequency = 5;
+            this.trackBar9.Value = 20;
+            // 
+            // numericUpDown9
+            // 
+            this.numericUpDown9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numericUpDown9.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDown9.Location = new System.Drawing.Point(599, 23);
+            this.numericUpDown9.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDown9.Name = "numericUpDown9";
+            this.numericUpDown9.Size = new System.Drawing.Size(55, 21);
+            this.numericUpDown9.TabIndex = 1;
+            this.numericUpDown9.Value = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            // 
+            // button17
+            // 
+            this.button17.Location = new System.Drawing.Point(675, 22);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(131, 22);
+            this.button17.TabIndex = 2;
+            this.button17.Text = "Set Speed";
+            this.button17.UseVisualStyleBackColor = true;
+            // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(812, 22);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(131, 22);
+            this.button18.TabIndex = 3;
+            this.button18.Text = "Reset to Auto Mode";
+            this.button18.UseVisualStyleBackColor = true;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(983, 923);
+            this.ClientSize = new System.Drawing.Size(979, 923);
+            this.Controls.Add(this.groupBox8);
+            this.Controls.Add(this.groupBox7);
+            this.Controls.Add(this.groupBox5);
+            this.Controls.Add(this.groupBox11);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grpMain);
@@ -422,6 +902,30 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).EndInit();
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -458,6 +962,36 @@
         private System.ComponentModel.BackgroundWorker background_FetchStates;
         private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.Button about_button;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TrackBar trackBar2;
+        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.TrackBar trackBar3;
+        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.TrackBar trackBar5;
+        private System.Windows.Forms.NumericUpDown numericUpDown5;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.TrackBar trackBar6;
+        private System.Windows.Forms.NumericUpDown numericUpDown6;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.TrackBar trackBar9;
+        private System.Windows.Forms.NumericUpDown numericUpDown9;
+        private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button button18;
     }
 }
 
